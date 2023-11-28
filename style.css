@@ -1,0 +1,242 @@
+/* 
+Theme Name: ZenithMarket
+Text Domain: ZenithMarket
+Version: 1.0
+Description: A csutom theme for soll.uk woocommerce store
+Tags: Eccommerce, responsive, ACF, Woocommerce
+Author: Dovydas Balionis 
+Author URI: https://dovydasbalionis.co.uk/
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+:root {
+    /* Main Colors */
+    --primary-color: #002872;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --secondary-accent-color: #fdb525;
+    --text-white-color:  #ffffff;
+    --text-black-color: #000000;
+    --text-secondary-color:#77787a; 
+    --secondary-background-color:  #f1f5fd;
+
+    /* Fonts */
+    --base-font-family: 'Arial', sans-serif;
+    --heading-font-family: 'Roboto', sans-serif;
+
+    /* Spacing */
+    --spacing-unit: 8px;
+    --padding-default: var(--spacing-unit);
+    --margin-default: var(--spacing-unit);
+
+      /* Typography */
+    --base-font-size: 16px;
+    --heading-1: 2em;
+    --heading-2: 1.5em;
+    --heading-3: 1.2em;
+
+      /* Borders and Box Shadows */
+    --border-radius: 4px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Transitions */
+    --transition-duration: 0.5s;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    box-sizing: border-box;
+}
+
+/* HEADER LAYOUT STYLES */
+
+.header-main{
+  padding: 0 3%; /* Add a variable left right padding depending on device */
+  margin: 0 auto; /* Center nav bar */
+  max-width: 1480px; /* Contol max width of desktop navbar section */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-top-spacing {
+  max-width: 1480px !important;
+}
+
+.widget-header{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  margin-left: .5rem;
+}
+
+.widget-header a span{
+  display: inline-block;
+  width: 100%;
+}
+/* SITE LOGO - start here */
+.logo img{
+  width: 200px !important;
+  height: 30px !important; 
+  max-width: 200px;
+}
+
+/* Icon resize for mobile - TEMP disabled */
+/* @media (max-width: 767.98px) {
+  .logo img{
+     width:180px !important;
+  }
+} */
+/* SITE LOGO - ends here */
+
+/* SEARCH BAR - start here */
+
+.search-bar{
+  width: 435px;
+}
+
+@media (max-width: 980px) {
+  .search-bar{
+     width: 100%;
+  }
+  
+}
+
+.search-button-outline{
+  border: 1px solid #36548b;
+  background-color:#36548b ;
+  transition: 0.3s;
+}
+
+.search-button-outline:hover{
+  border: 1px solid #36548b;
+}
+
+
+/* .bi-search::before{
+  color: #ffffff;
+
+} */
+
+.bi-search{
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.bi-search:hover{
+  color: #36548b;
+  
+}
+
+
+
+.navbar{
+   padding-top: 0;
+   padding-bottom: 0;
+  /*   box-shadow: 1px 3px 4px 0 #adadad33;*/
+}
+
+.navbar-light .navbar-nav .nav-link {
+   color: #1ebdc2;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+   color: #1ebdc2;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+   color: #fff;
+}
+.navbar-light .navbar-nav .nav-link{
+   padding-top: 22px;
+   padding-bottom: 22px;
+   transition: 0.3s;
+   padding-left: 24px;
+   padding-right: 24px;
+   font-size: 14px !important;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+   background: #1ebdc2;
+   transition: 0.3s;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1ebdc2 !important;
+}
+/* Control the offset distance from the navbar bottom. */
+.sm-menu{
+  border-radius: 0px;
+  border: 0px;
+  top: 100%; /* THIS CHANGE HOW FAR THE MEGA MENU BOX IS FROM LINK - 100% = below lik container */
+  box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px; /* ADD A shadow to bottom of the mega menu */
+}
+.dropdown-item {
+  color: #3c3c3c;
+      font-size: 14px;
+}
+/* Menu item hover */
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #2196F3;
+}
+
+/* BASKET ICONS - START HERE */
+
+
+.mobile-menu-header-spacing{
+  margin-top: 3px;
+  margin-left: 16px;
+}
+
+.navbar-toggler{
+  outline: none !important;
+}
+
+
+.widget-header a, .mobile-menu-title{
+  color: #3c3c3c;
+}
+
+.navbar-toggler-icon{
+  line-height: 0;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+}
+
+
+
+.navbar-toggler-icon i{
+  font-size: 20px;
+}
+/* BASKET ICONS - END HERE */
+
+
+/* Menu positon static utility class - IMPORTANT */
+.position-static {
+  position: static;
+}
+/* MEGAMENU CONTROL THE STYLE OF MEGAMENU -
+Create a menu wide mega menu container */
+.megamenu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+.megamenu h6{
+  margin-left: 21px;
+}
+.megamenu i{
+  width: 20px;
+}
+
+.border-line{
+  border-top: 1px solid #a2a8ab;
+  margin: 0 auto !important;
+}
