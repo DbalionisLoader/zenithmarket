@@ -39,7 +39,7 @@
               >
                 <!-- ** SITE LOGO - START  **-->
                 <div
-                  class="col-2 col-xl-1 col-lg-1 p-0 me-0 me-lg-3 me-xl-0 logo order-first align-self-center align-self-lg-start"
+                  class="col-5 col-xl-1 col-lg-1 p-0 me-0 me-lg-3 me-xl-0 logo order-first align-self-center align-self-lg-start"
                 >
                   <a class="navbar-brand" href="/"
                     ><img src="<?php echo get_template_directory_uri();?>/images/sol2.webp" alt="Soll.uk Automotive Paint Logo"
@@ -67,18 +67,18 @@
                 <!-- SEARCH BAR end here  -->
                 <!-- Basket icon col  -->
                 <div
-                  class="col-8 col-lg-4 p-0 basket-icon order-second order-lg-3"
+                  class="col-7 col-lg-4 p-0 basket-icon order-second order-lg-3"
                 >
                   <nav
                     class="header-basket-section p-0 col-12 d-flex align-items-start justify-content-end float-right text-right"
                     aria-label="My Account"
                   >
                     <!-- Individual icons go here  -->
-                    <div class="widget-wrap">
+                    <div class="widget-wrap px-0 mx-0">
                       <!-- Account icon  -->
-                      <div class="widget-header">
-                        <a class="icon" href>
-                          <i class="bi bi-person-fill"></i>
+                      <div class="widget-header  px-0 mx-0">
+                        <a class="icon  px-0 mx-0" href>
+                          <i class="bi bi-person-fill  px-0 mx-0"></i>
                           <span>Account</span>
                         </a>
                       </div>
@@ -115,7 +115,7 @@
                   </nav>
                 </div>
               </div>
-              <div class="row main-menu-line">
+              <div class="row main-menu-line mx-0 px-0">
                 <!-- Off-canvas menu structure -->
                 <nav class="navbar navbar-expand-lg col-12">
                   <div
@@ -146,7 +146,7 @@
                           <div class="d-flex flex-row">
                             <ul class="navbar-nav navbar-light text-white">
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link ps-0" href="#">Home</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">About Us</a>

@@ -31,6 +31,7 @@ Author URI: https://dovydasbalionis.co.uk/
     --margin-default: var(--spacing-unit);
 
       /* Typography */
+    --h-link-font-size: 14px;
     --base-font-size: 16px;
     --heading-1: 2em;
     --heading-2: 1.5em;
@@ -75,6 +76,7 @@ body{
 .widget-header a span{
   display: inline-block;
   width: 100%;
+  font-size: var(--h-link-font-size);
 }
 /* SITE LOGO - start here */
 .logo img{
@@ -97,12 +99,7 @@ body{
   width: 435px;
 }
 
-@media (max-width: 980px) {
-  .search-bar{
-     width: 100%;
-  }
-  
-}
+
 
 .search-button-outline{
   border: 1px solid #36548b;
@@ -173,7 +170,7 @@ body{
 }
 .dropdown-item {
   color: #3c3c3c;
-      font-size: 14px;
+  font-size: 14px;
 }
 /* Menu item hover */
 .dropdown-item.active, .dropdown-item:active {
@@ -197,6 +194,7 @@ body{
 
 .widget-header a, .mobile-menu-title{
   color: #3c3c3c;
+  font-size: var(--h-link-font-size);
 }
 
 .navbar-toggler-icon{
@@ -239,4 +237,23 @@ Create a menu wide mega menu container */
 .border-line{
   border-top: 1px solid #a2a8ab;
   margin: 0 auto !important;
+}
+
+@media (max-width: 980px) {
+  .search-bar{
+     width: 100%;
+  }
+  .logo img{
+    width: 145px !important;
+    max-height: auto;
+   /*  height: 30px !important;  */
+  /*   max-width: 200px; */
+  }
+  .mobile-menu-header-spacing{
+    margin-top:4px;
+   padding-left: 8px;
+  }
+  .widget-header{
+    margin-left: 0;
+  }
 }
