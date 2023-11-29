@@ -25,7 +25,7 @@ function zenith_market_locations(){
 //Add lardrock_menus_locations during init step
 add_action('init','zenith_market_locations');
 
-// Add global styles to wp_head function
+// Add styles to wp_head function
 // array argument controls the order of css files loading  
 // PARAMS:
 // stylesheet name, location, dependancy(order of loading), version, all???
@@ -39,6 +39,15 @@ function zenith_market_reg_styles(){
    wp_enqueue_style( 'zenith_market_bootstrap_icon-style', "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css", array('zenith_market_bootstrap_style'), '1.11.1', 'all' );  
    //Get global style.css sheet from local dir
    wp_enqueue_style( 'zenith_market_global_style', get_template_directory_uri() . "/style.css", array('zenith_market_bootstrap_style','zenith_market_bootstrap_icon-style'), $version, 'all' );
+
+    // Enqueue Webpack-compiled CSS for header
+    wp_enqueue_style('zenith_market_header_style', get_template_directory_uri() . '/dist/header.bundle.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
+
+    // Enqueue Webpack-compiled CSS for footer
+    wp_enqueue_style('zenith_market_footer_style', get_template_directory_uri() . '/dist/footer.bundle.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
+ 
+    // Enqueue Webpack-compiled main style.css
+    wp_enqueue_style('zenith_market_main_style', get_template_directory_uri() . '/dist/style.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
 }
 
 // Add js scripts to wp_head function
@@ -73,4 +82,12 @@ add_action('wp_enqueue_scripts','zenith_market_reg_styles');
 
 //Call ardrock_reg_js_scripts function
 add_action('wp_enqueue_scripts','zenith_market_reg_js_scripts');
+
+//CSS optimazation plan - have separate css files for development ease
+//rpe-Combine the required separate css files into one css for each page
+//Conditionaly enqueue the required css file per page 
+
+
 ?>
+
+

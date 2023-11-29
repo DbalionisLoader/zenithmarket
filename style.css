@@ -243,6 +243,12 @@ Create a menu wide mega menu container */
   .search-bar{
      width: 100%;
   }
+ 
+}
+
+
+@media (max-width: 480px) {
+ 
   .logo img{
     width: 145px !important;
     max-height: auto;
@@ -256,4 +262,15 @@ Create a menu wide mega menu container */
   .widget-header{
     margin-left: 0;
   }
+}
+
+@media (max-width: 325px) {
+ 
+  .logo img{
+    display: none;
+  }
+  .widget-header{
+   padding-left: 8px;
+  }
+  
 }
