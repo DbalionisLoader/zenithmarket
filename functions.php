@@ -64,10 +64,10 @@ function zenith_market_reg_styles(){
    wp_enqueue_style( 'zenith_market_global_style', get_template_directory_uri() . "/style.css", array('zenith_market_bootstrap_style','zenith_market_bootstrap_icon-style'), $version, 'all' );
 
     // Enqueue Webpack-compiled CSS for header
-    wp_enqueue_style('zenith_market_header_style', get_template_directory_uri() . '/dist/header.bundle.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
+    wp_enqueue_style('zenith_market_header_style', get_template_directory_uri() . '/dist/header.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
 
     // Enqueue Webpack-compiled CSS for footer
-    wp_enqueue_style('zenith_market_footer_style', get_template_directory_uri() . '/dist/footer.bundle.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
+    wp_enqueue_style('zenith_market_footer_style', get_template_directory_uri() . '/dist/footer.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');
  
     // Enqueue Webpack-compiled main style.css
     wp_enqueue_style('zenith_market_main_style', get_template_directory_uri() . '/dist/style.css', array('zenith_market_bootstrap_style', 'zenith_market_bootstrap_icon-style'), $version, 'all');

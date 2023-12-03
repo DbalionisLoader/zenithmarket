@@ -1,0 +1,33 @@
+.megamenu  .mega-menu-ul-style {
+    padding-left: 16px;
+    padding-top: 16px;
+}
+.mega-menu-ul-style{
+
+   
+
+    li{
+        list-style: none;
+        font-size: 16px;
+        padding-left: 0;
+   
+
+        &:first-child{
+            font-weight: bold;
+        } 
+
+        &:hover{
+            background-color: rgb(194, 194, 194);
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: rgb(39, 39, 39);
+        
+        &:hover{
+            //text-decoration: underline rgb(22, 20, 20);
+        }
+
+    }
+}
