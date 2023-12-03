@@ -137,11 +137,6 @@
                     </div>
                     <div class="offcanvas-body">
                       <div class="col-12 px-0 position-static">
-                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#mobile_nav" aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                    </button> 
-                                    """" collapse navbar-collapse """" Add back next to mobile nav-->
-
                         <div class="justify-content-start" id="mobile_nav">
                           <div class="d-flex flex-row">
                             <ul class="navbar-nav navbar-light text-white">

@@ -1,10 +1,24 @@
 <?php
 
+//**** SUPPORT FUNCTIONS ****
+
 //Add dynamic automatic wordpress title tag support - DISABLED - need attention
 function zenith_market_theme_support(){
    add_theme_support('title-tag');
 }
 //add_action('document_title_parts','zenith_market_theme_support'); - DISABLED 
+
+//Add basic Woocommerce support
+function zenith_market_add_woocommerce_support() {
+   add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'zenith_market_add_woocommerce_support' );
+
+//Add post-thumbnails incase needed by Woocommerce
+function zenith_market_add_theme_support() {
+   add_theme_support( 'post-thumbnails' );
+}
+add_action( 'after_setup_theme', 'zenith_market_add_theme_support' );
 
 //Add custom wp_get_attachment_image image size function
 // PARAMS:
@@ -13,17 +27,26 @@ function zenith_market_theme_support(){
 // Crop the image to specifc dimenstion (true/false)
 add_image_size( 'custom-thumbnail', 60, 60, true );
 
+// *** ADD CUSTOM WOOCOM FUNCTIONALITY AND HOOKS HERE
+//function mytheme_customize_woocommerce() {
+   // Add or remove actions and filters for WooCommerce
+//}
+//add_action( 'after_setup_theme', 'mytheme_customize_woocommerce' );
 
 //Add dynamic menus function
 function zenith_market_locations(){
    $locations = array(
       'primary' => "Primary Navbar Menu",
-      'footer'  => "Footer Menu"
+      'footer'  => "Footer Menu",
+      'custom-pc' => "Custom PC sub-menu",
+      'next-day-pc' => "Next Day PC sub-menu",
+      'gaming-pc' => "Gaming PC sub-memu",
+      'desktop-pc' => "Desktop PC sub-menu"
    );
    register_nav_menus($locations);
 }
 //Add lardrock_menus_locations during init step
-add_action('init','zenith_market_locations');
+add_action('after_setup_theme','zenith_market_locations');
 
 // Add styles to wp_head function
 // array argument controls the order of css files loading  
