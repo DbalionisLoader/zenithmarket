@@ -1,0 +1,35 @@
+
+
+
+:root {
+    /* Main Colors */
+    --primary-color: #34558b;
+    --secondary-color: #4687f1;
+    --accent-color: #de3838;
+    --secondary-accent-color: #fdb525;
+    --text-white-color:  #ffffff;
+    --text-black-color: #000000;
+    --text-secondary-color:rgb(98, 101, 109); 
+    --secondary-background-color:  #f1f5fd;
+
+    /* Fonts */
+    --base-font-family: 'Roboto', sans-serif;
+    --heading-font-family: 'Roboto', sans-serif;
+}
+
+/* Spacing */
+$spacing-unit: 8px;
+$padding-default: var(--spacing-unit);
+$margin-default: var(--spacing-unit);
+
+/* Fonts size*/
+$h-link-font-size: 14px;
+$base-font-size: 16px;
+$heading-1: 2em;
+
+/* Borders and Box Shadows */
+$border-radius: 4px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* Transitions */
+$transition-duration: 0.5s;

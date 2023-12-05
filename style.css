@@ -7,50 +7,8 @@ Tags: Eccommerce, responsive, ACF, Woocommerce
 Author: Dovydas Balionis 
 Author URI: https://dovydasbalionis.co.uk/
 */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 
-:root {
-    /* Main Colors */
-    --primary-color: #002872;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
-    --secondary-accent-color: #fdb525;
-    --text-white-color:  #ffffff;
-    --text-black-color: #000000;
-    --text-secondary-color:#77787a; 
-    --secondary-background-color:  #f1f5fd;
-
-    /* Fonts */
-    --base-font-family: 'Arial', sans-serif;
-    --heading-font-family: 'Roboto', sans-serif;
-
-    /* Spacing */
-    --spacing-unit: 8px;
-    --padding-default: var(--spacing-unit);
-    --margin-default: var(--spacing-unit);
-
-      /* Typography */
-    --h-link-font-size: 14px;
-    --base-font-size: 16px;
-    --heading-1: 2em;
-    --heading-2: 1.5em;
-    --heading-3: 1.2em;
-
-      /* Borders and Box Shadows */
-    --border-radius: 4px;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    /* Transitions */
-    --transition-duration: 0.5s;
-}
-
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: var(--base-font-family);
-    font-size: var(--base-font-size);
-    box-sizing: border-box;
-}
 
 /* HEADER LAYOUT STYLES */
 

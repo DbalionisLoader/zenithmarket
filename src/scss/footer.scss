@@ -1,0 +1,55 @@
+@use 'vars.scss';
+
+
+//Control full footer colour and size 
+.footer-wrap{
+    background-color: var(--primary-color);
+}
+
+
+.site-logo img{
+    width: 280px;  
+    height: 50px;
+    max-width: 100%;
+    max-height: auto;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.foot-item{
+    color: var(--text-white-color) !important;
+    font-weight:500;
+    font-size: 0.9375rem;
+    padding-bottom: 16px;
+
+    a{
+    color: var(--text-white-color);
+    text-decoration: none;
+    }
+
+    &:hover {
+        color: var(--text-white-color); // Change to your desired hover color
+        text-decoration: underline; // Optional: adds underline on hover
+        // Other hover effects can be added here
+    }
+}
+
+footer h5{
+    font-weight: 400;
+    color: var(--text-white-color) !important;
+ }
+
+.copy-notice{
+    
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: var(--secondary-color);
+
+    p {
+       color:rgba(255, 255, 255, 0.32);
+       font-size: 13px;  
+    }
+
+
+}
+
+

@@ -48,6 +48,13 @@ function zenith_market_locations(){
 //Add lardrock_menus_locations during init step
 add_action('after_setup_theme','zenith_market_locations');
 
+
+//Enqueue google fonts here
+function zenith_market_enqueue_google_fonts() {
+   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap', false ); 
+}
+add_action( 'wp_enqueue_scripts', 'zenith_market_enqueue_google_fonts' );
+
 // Add styles to wp_head function
 // array argument controls the order of css files loading  
 // PARAMS:
