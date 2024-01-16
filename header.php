@@ -17,10 +17,10 @@
   <header>
     <section class="header-main text-black bg-white">
       <div class="container px-0 pb-0 pt-4 header-top-spacing">
-        <!-- 
-                    main-header-layout-row grid control the layout of the 3 header sections - logo, search/shopbasket, and navigation bar.
-                    m-0 is used to prevent logo from going outside the container width
-                -->
+<!-- 
+main-header-layout-row grid control the layout of the 3 header sections - logo, search/shopbasket, and navigation bar.
+m-0 is used to prevent logo from going outside the container width
+-->
         <div class="row m-0 main-header-layout-row">
           <div class="col-xl-12 col-lg-12 p-0 position-static">
             <!-- 
@@ -276,15 +276,3 @@
     </section>
   </header>
   <hr class="m-0 p-0 border-line" />
-  <!-- ========== Start Section ========== 
-  
-   <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-    <script src="scripts.js"></script> -->

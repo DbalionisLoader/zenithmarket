@@ -16,7 +16,7 @@ Author URI: https://dovydasbalionis.co.uk/
   padding: 0 3%; /* Add a variable left right padding depending on device */
   margin: 0 auto; /* Center nav bar */
   max-width: 1480px; /* Contol max width of desktop navbar section */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif; 
 }
 
 .header-top-spacing {

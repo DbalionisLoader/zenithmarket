@@ -2,12 +2,17 @@
 <?php 
     get_header();
 ?>
-
-<div class="testing">
-     <h1>TEST</h1>
+<div class="homepage-section">
+    <section class="homepage service-bar">
+        <?php get_template_part('template-parts/carousel/service', 'carousel'); ?>
+    </section>
 </div>
 
- <h1>TEST 2</h1>
+<div class="testing">
+
+</div>
+
+
 <?php 
     get_footer();
 ?>

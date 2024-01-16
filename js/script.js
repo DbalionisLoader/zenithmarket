@@ -1,5 +1,7 @@
-console.log("js/script connected");
 
+
+console.log("js/script connected");
+//Header mega menu jquery 
 $(document).ready(function () {
     $('.navbar-light .dmenu').hover(function () {
             $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
@@ -13,4 +15,33 @@ $(document).ready(function () {
             e.stopPropagation();
         });
     });
+
     
+    $(document).ready(function() {
+        $('#service-carousel').slick({
+            dots: false,
+            infinite: true,   
+            speed: 300,
+            slidesToShow: 4, // Show 4 names initially
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 960, // Tablet breakpoint
+                    settings: {
+                      
+                        slidesToShow: 1, // Show 2 names on tablet
+                        slidesToScroll: 1,  
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                    }
+                },
+                {
+                    breakpoint: 480, // Mobile breakpoint
+                    settings: {
+                        slidesToShow: 1, // Show 1 name on mobile
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
