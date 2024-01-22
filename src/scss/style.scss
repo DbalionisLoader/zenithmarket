@@ -7,6 +7,12 @@
   }
 }
 
+.homepage{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
 .service-block {
   
 
@@ -25,4 +31,15 @@
     font-size: 12px;
     line-height: 17px;
   }
+}
+.landing-banner-carousel{
+
+  .banner{
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
 }

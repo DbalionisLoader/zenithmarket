@@ -16,7 +16,7 @@ $(document).ready(function () {
         });
     });
 
-    
+// Init SERVICE BAR slick carousel    
     $(document).ready(function() {
         $('#service-carousel').slick({
             dots: false,
@@ -45,3 +45,17 @@ $(document).ready(function () {
             ]
         });
     });
+
+//Init landing page banner carousel    
+
+$(document).ready(function() {
+    $('#banner-carousel').slick({
+        dots: false,
+        infinite: true,   
+        slidesToShow: 1, // Show 4 names initially
+        slidesToScroll: 1, 
+        autoplay: true,
+        autoplaySpeed: 6000
+
+    });
+});
