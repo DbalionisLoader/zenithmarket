@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-
+// SERVICE CAROUSEL CSS - START
 .service-block {
   
 
@@ -32,6 +32,8 @@
     line-height: 17px;
   }
 }
+//SERVICE CAROUSEL CSS - END
+// LANDING PAGE BANNER CAROUSEL CSS - START
 .landing-banner-carousel{
 
   .banner{
@@ -42,4 +44,19 @@
     }
   }
 
+}
+// LANDING PAGE BANNER CAROUSEL CSS - END
+
+
+.category-grid{
+  
+    img{
+      width: 150px;
+      height: auto;
+    }
+    h2{
+      font-size: 18px;
+      text-align: center;
+      color: rgb(0, 116, 217);
+    }
 }

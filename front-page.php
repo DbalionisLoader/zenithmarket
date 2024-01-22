@@ -9,6 +9,9 @@
     <section class="homepage banner-section">
         <?php get_template_part('template-parts/carousel/banner', 'carousel'); ?>
     </section>
+    <section class="homepage landing-category-grid1">
+        <?php get_template_part('template-parts/category/category', 'grid'); ?>
+    </section>
 </div>
 
 <div class="testing">
