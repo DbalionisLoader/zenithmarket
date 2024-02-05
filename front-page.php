@@ -29,13 +29,18 @@
         set_query_var('carousel_args', $carousel_args);
    
         get_template_part('template-parts/carousel/frontpage', 'carousel',['carousel_args' => $carousel_args]); ?>
-    <section>
-
     </section> 
-</div>
-
-<div class="testing">
-
+    <section class="homepage about-store-frontpage mt-5 mb-5">
+        <hr class="m-0 p-0 border-line-frontpage">
+        <div class="about-store-text-box">
+        <h2 class="mt-5">We are holding the prices of some of our most popular products.</h2>
+        <p>Our one stop car paint shop offers automotive paint for a wide range of applications. The more you buy the more you save with our bulk offers on the most popular deep repair body fillers, fine putties, high solid primers, masking products and automotive coatings.</p>
+        <h2 class="mt-3">In our car paint shop you can always find everyday essential products at low prices.</h2>
+        <p>Very strong fibreglass body fillers for structural repairs, underbody coatings, finishing putties, car coatings and polishing compounds you can find our car paint shop near you.</p>
+        <h2 class="mt-3">More than 4,000 products from more than 30 manufacturers are ready for shipping.</h2>
+        <p>Car coatings and auto body paints from Kapci, Mipa, Final Systems have a very long established reputation for high quality and durability. We stock the most popular primers, solid colours and lacquers for rapid despatch on your demand.</p>
+        </div>
+    </section>
 </div>
 
 
