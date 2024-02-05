@@ -12,6 +12,14 @@
     <section class="homepage landing-category-grid1">
         <?php get_template_part('template-parts/category/category', 'grid'); ?>
     </section>
+    <section class="homepage secondary-banner-section">
+        <div class="container mt-5">
+            <a href="#"> <img src=" <?php echo get_template_directory_uri(); ?>/images/temp-paint-mix.png" alt="Test3" class="img-fluid" ></a>
+        </div>          
+    </section class="homepage sale-carousel">
+    <section>
+
+    </section> 
 </div>
 
 <div class="testing">

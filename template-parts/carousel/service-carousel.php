@@ -1,3 +1,6 @@
+<!-- 
+  Service carousel - the banner showing stores benefits below the header
+-->
 
 
 <div class="container-fluid">
