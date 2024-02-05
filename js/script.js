@@ -59,3 +59,18 @@ $(document).ready(function() {
 
     });
 });
+
+
+$(document).ready(function() {
+    $('#product-carousel').slick({
+        dots: true,
+        infinite: true,   
+        slidesToShow: 6, // Show 4 names initially
+        slidesToScroll: 1, 
+        autoplay: true,
+        autoplaySpeed: 6000,
+        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slick-next">Next</button>'
+
+    });
+});

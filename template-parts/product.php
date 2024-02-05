@@ -2,6 +2,7 @@
 /** 
  * Product card template
  * @package zenithmarket
+ * @Test - if product show if 0 stock
  */
 
  $product_id = get_the_ID();

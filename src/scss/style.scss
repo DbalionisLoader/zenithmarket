@@ -32,8 +32,8 @@
     line-height: 17px;
   }
 }
-//SERVICE CAROUSEL CSS - END
-// LANDING PAGE BANNER CAROUSEL CSS - START
+// SERVICE CAROUSEL CSS - END
+// *** LANDING PAGE BANNER CAROUSEL CSS - START ***
 .landing-banner-carousel{
 
   .banner{
@@ -46,8 +46,6 @@
 
 }
 // LANDING PAGE BANNER CAROUSEL CSS - END
-
-
 .category-grid{
   
     img{
@@ -59,4 +57,41 @@
       text-align: center;
       color: rgb(0, 116, 217);
     }
+}
+// *** LANDING PAGE PRODUCT CAROUSEL CSS - START ***
+
+.carousel-product{
+
+ .carousel-product-image{
+
+    img{
+
+    max-width: 150px;
+    height: auto;
+    margin: auto;
+    }  
+    
+ }
+ .carousel-product-info{
+
+  a{
+    text-decoration: none;
+    }
+
+  h3{
+    font-size: 16px;
+  }  
+ }
+
+ .carousel-product-price{
+  
+  .regular-price-onsale{
+    color: rgb(134, 134, 134);
+  }
+
+  h3{
+    font-size: 16px;
+  }
+ }
+
 }
