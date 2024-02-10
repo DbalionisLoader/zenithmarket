@@ -100,7 +100,7 @@
 }
 
 .border-line-frontpage{
-    border-width: 2px;
+    border-width: 1px;
 }
 
 .about-store-text-box{
@@ -117,4 +117,29 @@
     line-height: 28px;
     color: rgb(85, 85, 85);
   }
+}
+
+// Woocommerece Product CSS
+.product-info{
+    
+  .product-delivery{
+      
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+  }
+}
+
+.out-of-stock{
+  color: red;
+}
+
+.in-stock{
+  color: rgb(17, 147, 5);
 }

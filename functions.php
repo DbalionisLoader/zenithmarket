@@ -26,6 +26,7 @@ add_action( 'after_setup_theme', 'zenith_market_add_theme_support' );
 // Width and heigh of image,
 // Crop the image to specifc dimenstion (true/false)
 add_image_size( 'custom-thumbnail', 60, 60, true );
+add_image_size( 'product-image', 200, 200, true );
 
 // *** ADD CUSTOM WOOCOM FUNCTIONALITY AND HOOKS HERE
 //function mytheme_customize_woocommerce() {
