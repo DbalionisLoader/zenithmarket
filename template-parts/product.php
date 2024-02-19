@@ -17,15 +17,15 @@
  $is_stock_quantity = $product->get_stock_quantity();
  $product_price = $product->get_price_html(); //Return price in HTML format
  $discount_precent = ! empty($sale_price) ? floatval( ($regular_price - $sale_price) / $regular_price * 100 ) : 0;
- $price_saved = ! empty($sale_price) ? ($regular_price-$sale_price) : 0;
+ $price_saved = ! empty($sale_price) ? number_format(round(($regular_price-$sale_price), 2)) : 0;
 
     ?>
     <div class="row">
         <div class="col-6">
             <div class="product mb-5">
-                <div class="position-relative">
+                <div class="product-image">
                     <a href="<?php echo esc_url($product_link) ?>">
-                      <img src="<?php echo esc_url($product_thumbnail)?> " alt="<?php echo esc_url($product_title)?>">
+                      <img  src="<?php echo esc_url($product_thumbnail)?> " alt="<?php echo esc_url($product_title)?>">
                     </a>
                 <?php 
                 if ($is_product_on_sale){
@@ -38,6 +38,7 @@
                 </div>
             </div> 
         </div>
+        <!-- Start of product information - Product title, stock, extras, price and add to card -->
         <div class="col-6">
             <div class="product-info">
                 <h3 class="product-title h5"><?php echo esc_html($product_title)?> </h3>
@@ -49,18 +50,22 @@
                         </ul>
                     <hr>
                 <h4 class="product-price h6"><?php echo wp_kses_post($product_price)?> </h4>
+                <!-- Display sale price here -->
                 <?php
                     if (! empty($discount_precent)){
                     ?>
-                  
                     <span class="product-discount h6 text-danger">
                       Save £<?php echo esc_html($price_saved); ?>
                     </span>
-                    
                     <?php    
-                    }
-                ?>
-               
+                    } ?>
+
+                <!-- Add to card button here-->
+                <!-- To add product to card, create a url link by combining site url + add-to-card + product id -->
+                <!-- CARE WITH add-to-cart spelling-->
+                <div class="mt-3">
+                     <a href="<?php echo esc_url( sprintf( '%1$s/?add-to-cart=%2$s', site_url(), $product_id));?>" class="btn btn-primary"> Add to cart</a> 
+                </div>    
             </div>
         </div>
    

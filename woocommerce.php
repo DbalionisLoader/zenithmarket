@@ -60,7 +60,7 @@ $products = new WP_Query( $args );
     if ( $products->have_posts() ) :
         while ( $products->have_posts() ) : $products->the_post();
         ?>
-        <div class="col-lg-6">
+        <div class="col-lg-6  mb-5">
             <?php  get_template_part( 'template-parts/product' );// This will include the content-product.php template ?> 
         </div>
         <?php    

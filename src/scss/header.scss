@@ -41,3 +41,22 @@ body{
 
     }
 }
+
+.widget-wrap .minicart-quantity{
+    background-color: #36578c;
+    color: rgb(255, 255, 255);
+    top: -6px; // Control how high the circle is above the cart icon
+    left: 34px; // Control circle overlap over the cart icon
+    right: unset;
+    position: absolute;
+    display: inline-block;
+    width: auto; //Makes background space fit around the number
+    height: unset;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px 5px; // Add padding to make circle background
+    border-radius: 20px;
+    min-width: 20px;
+    max-width: unset;
+    line-height: 1.15; //Different browsers use different "normal" line heights
+}

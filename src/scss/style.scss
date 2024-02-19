@@ -120,6 +120,17 @@
 }
 
 // Woocommerece Product CSS
+
+.product-image{
+  
+  text-align: right;
+  
+  img{
+    max-width: 200px;
+    height: auto;
+  }
+}
+
 .product-info{
     
   .product-delivery{

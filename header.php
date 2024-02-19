@@ -63,6 +63,7 @@ m-0 is used to prevent logo from going outside the container width
                     <div class="widget-header">
                       <a class="icon icon-sm" href>
                         <i class="bi bi-basket-fill"></i>
+                        <span class="minicart-quantity"> <?php echo WC()->cart->get_cart_contents_count(); ?> </span>
                         <span>Basket</span>
                       </a>
                     </div>
