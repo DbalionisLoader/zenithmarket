@@ -4,7 +4,7 @@
  * @package zenithmarket
  */ ?>
 
-<div class="container category-grid">
+<div class="container category-grid mt-5">
     <div class="row">
 
         <?php 

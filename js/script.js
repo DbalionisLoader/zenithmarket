@@ -24,6 +24,7 @@ $(document).ready(function () {
             speed: 300,
             slidesToShow: 4, // Show 4 names initially
             slidesToScroll: 1,
+            useTransform: false,// Lazy load images
             responsive: [
                 {
                     breakpoint: 960, // Tablet breakpoint
@@ -43,9 +44,9 @@ $(document).ready(function () {
                     }
                 }
             ]
+
         });
     });
-
 //Init landing page banner carousel    
 
 $(document).ready(function() {
@@ -55,19 +56,21 @@ $(document).ready(function() {
         slidesToShow: 1, // Show 4 names initially
         slidesToScroll: 1, 
         autoplay: true,
+        useTransform: false,
         autoplaySpeed: 6000
 
     });
 });
-
+ 
 
 $(document).ready(function() {
     $('#product-carousel').slick({
         dots: true,
         infinite: true,   
-        slidesToShow: 6, // Show 4 names initially
+        slidesToShow: 5, // Show 4 names initially
         slidesToScroll: 1, 
         autoplay: true,
+        lazyLoad: 'ondemand',
         autoplaySpeed: 6000,
         prevArrow: '<button type="button" class="slick-prev">Previous</button>',
         nextArrow: '<button type="button" class="slick-next">Next</button>'
