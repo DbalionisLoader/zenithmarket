@@ -97,8 +97,11 @@ function zenith_market_reg_js_scripts(){
 
    //Get bootstrap script from CDN - TODO: convert to a local dir for critical scripts only for speed boost
    wp_enqueue_script( 'zenith_market_bootstrap_js_script', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", array(), '5.3.2', true);
-   
+   //Get Jquery 3.71
    wp_enqueue_script('zenith_market_jquery', "https://code.jquery.com/jquery-3.7.1.js", array(), '3.7.1', true);
+   //Add my ajax script with jquery dependancy
+   wp_enqueue_script('zenith_market_ajax_script', get_template_directory_uri() . '/js/ajax-pagination.js',
+   array('zenith_market_jquery'), null, true );
 
    wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('zenith_market_jquery'), null, true);
       //Get main.js script from local dir

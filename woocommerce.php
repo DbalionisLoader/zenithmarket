@@ -34,7 +34,7 @@
 
    $args = array(
     'post_type'      => 'product', //Woo Products
-    'posts_per_page' => 10,        //Products per page
+    'posts_per_page' => 4,        //Products per page
     'paged' =>  $paged,            //Get the page number - to use for pagination
     'order' => 'DESC',             //Product order
     'post_status' => 'publish',
@@ -55,7 +55,7 @@ $products = new WP_Query( $args );
 ?>
 
 <div class="container">
-    <div class="d-flex flex-wrap">
+    <div id="ajax-product-container" class="d-flex flex-wrap">
     <?php
     if ( $products->have_posts() ) :
         while ( $products->have_posts() ) : $products->the_post();
@@ -69,19 +69,27 @@ $products = new WP_Query( $args );
 else :
     echo esc_html__( 'No products found', 'your-text-domain' );
 endif;
-    ?>
-        
-    </div>
+    ?> 
+    </div> <!-- Product loop container end here -->
 </div>
-</div>
-//Pagination
-<?php
-$total_pages = $products->max_num_pages;
-get_template_part( 'template-parts/pagination', null, ['total_pages' => $total_pages, 'current_page' => $paged ] ); //Pass argument to template using 3rd param
-?>
+   <div class="pagination d-flex justify-content-center align-items-center mb-5">
+        <!-- Transfer paginate link to template file in future -->
+        <?php
+     
 
-
-
+        echo paginate_links(array(
+            'total' => $products->max_num_pages,
+            'type' => 'list',
+            'current' => $paged,
+            'format' => '?paged=%#%',
+            'echo' => 'true',
+            'prev_text' => __('&laquo; Prev'),
+            'next_text' => __(' Next &raquo'),
+    
+        ));
+        ?>
+   
+</div> <!-- store div section ends here-->
 </main>
 
 <?php 
