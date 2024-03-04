@@ -1,4 +1,17 @@
 <?php
+/**
+ * ZenithMarket functions and definitions
+ *
+ * @link 
+ *
+ * @package ZenithMarket
+ * @since 1.0.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 
 //**** SUPPORT FUNCTIONS ****
 
@@ -8,17 +21,17 @@ function zenith_market_theme_support(){
 }
 //add_action('document_title_parts','zenith_market_theme_support'); - DISABLED 
 
-//Add basic Woocommerce support
-function zenith_market_add_woocommerce_support() {
-   add_theme_support( 'woocommerce' );
-}
-add_action( 'after_setup_theme', 'zenith_market_add_woocommerce_support' );
+
 
 //Add post-thumbnails incase needed by Woocommerce
 function zenith_market_add_theme_support() {
    add_theme_support( 'post-thumbnails' );
 }
 add_action( 'after_setup_theme', 'zenith_market_add_theme_support' );
+
+//Add hook support
+add_filter('the_content', 'do_shortcode');
+
 
 //Add custom wp_get_attachment_image image size function
 // PARAMS:
@@ -131,7 +144,11 @@ add_action('wp_enqueue_scripts','zenith_market_reg_js_scripts');
 //rpe-Combine the required separate css files into one css for each page
 //Conditionaly enqueue the required css file per page 
 
-
+//Add basic Woocommerce support
+function zenith_market_add_woocommerce_support() {
+   add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'zenith_market_add_woocommerce_support' );
 ?>
 
 

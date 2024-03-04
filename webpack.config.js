@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-      header: './src/scss/header.scss',
       footer: './src/scss/footer.scss',
       style: './src/scss/style.scss'
     },

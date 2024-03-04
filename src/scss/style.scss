@@ -1,4 +1,6 @@
 @use 'vars.scss';
+@import 'header';
+@import 'pagination';
 
 .testing{
   h1 {
@@ -181,34 +183,3 @@
   color: rgb(17, 147, 5);
 }
 
-// Pagination for Woo Category page
-
-.pagination {
-
-  .page-numbers{
-    display: flex;
-    list-style: none;
-    padding: 0;
-  
-    li{
-      padding: 2px 8px;
-      border: solid 1.5px rgb(98, 101, 109);
-      border-radius: 10px;
-      margin-left: 2px;
-      margin-right: 2px;
-      font-size:  15px;
-      text-align: center;
-    }
-
-    a{
-      text-decoration: none;
-    }
-
-    .current{
-     
-      color: rgb(4, 2, 36);
-    }
-  }
-  
-
-}
