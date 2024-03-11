@@ -152,7 +152,9 @@ add_action( 'after_setup_theme', 'zenith_market_add_woocommerce_support' );
 
 //WOOCOMMERCE HOOK EDITS - TO BE MOVED
 
-
+//Change location of SKU template from summary to under the image gallery
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_meta', 30 );
 
 ?>
 

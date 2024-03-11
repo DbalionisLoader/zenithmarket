@@ -27,11 +27,14 @@ get_header( 'shop' ); ?>
 		 *
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 		 * @hooked woocommerce_breadcrumb - 20
-		 *
-		*do_action( 'woocommerce_before_main_content' );*/
+		 **/
+		do_action( 'woocommerce_before_main_content' );
+		
 	?>
+<!-- To enable default woocommerce styling - wrap any content with woocommerce class !-->	
+<div class="woocommerce">
 
-	<main class="single-product-container">
+	<div class="single-product-container">
 		<h2>Single product loop at single-product.php</h2>
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
@@ -39,7 +42,8 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
 		<?php endwhile; // end of the loop. ?>
-	</main>
+		</div>
+
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
@@ -58,6 +62,7 @@ get_header( 'shop' ); ?>
 		*do_action( 'woocommerce_sidebar' );*/
 	?> 
 
+</div>
 <?php
 get_footer( 'shop' );
 

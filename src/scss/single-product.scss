@@ -3,3 +3,98 @@
     max-width: 1400px;
     margin: 0 auto;
   }
+
+.single-product-container {
+.woocommerce-tabs {
+    padding-top:2em;
+    margin-bottom:4em;
+    width:100%
+  }
+  .woocommerce-tabs ul.tabs {
+    list-style:none;
+    padding:0;
+    margin:0 0 1em;
+    overflow:hidden;
+    position:relative
+  }
+.woocommerce-tabs ul.tabs:before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:1px;
+    background-color:var(--ast-border-color);
+  }
+.woocommerce-tabs ul.tabs li {
+    border:0;
+    background:0 0;
+    display:inline-block;
+    position:relative;
+    z-index:0;
+    border-radius:4px 4px 0 0;
+    margin:0 1em 0 0;
+    padding:0;
+    border-radius:0
+  }
+ .woocommerce-tabs ul.tabs li a {
+    display:inline-block;
+    padding:.5em 0;
+    font-weight:700;
+    color:#515151;
+    text-decoration:none
+  }
+ .woocommerce-tabs ul.tabs li a:hover {
+    text-decoration:none;
+    color:#6b6a6b
+  }
+  .woocommerce-tabs ul.tabs li.active {
+    z-index:2;
+    border-bottom-color:#fff
+  }
+  .woocommerce-tabs ul.tabs li.active a {
+    text-shadow:inherit
+  }
+ .woocommerce-tabs ul.tabs li.active::before {
+    content:' ';
+    position:absolute;
+    width:100%;
+    height:3px;
+    box-shadow:none;
+    top:0;
+    left:0;
+    border-radius:0
+  }
+  .woocommerce-tabs ul.tabs li.active::after {
+    border:none;
+    box-shadow:none
+  }
+ .woocommerce-tabs ul.tabs li::after,
+  .woocommerce-tabs ul.tabs li::before {
+    content:' ';
+    position:absolute;
+    bottom:-1px;
+    width:5px;
+    height:5px;
+    border:none;
+    box-shadow:none
+  }
+   .woocommerce-tabs ul.tabs::before {
+    position:absolute;
+    content:' ';
+    width:100%;
+    bottom:0;
+    left:0;
+    border-bottom:1px solid var(--ast-border-color);
+    z-index:1
+  }
+   .woocommerce-tabs ul.tabs li::after,
+ .woocommerce-tabs ul.tabs.tabs::before {
+    display:none;
+    border:0;
+  }
+  .woocommerce-tabs .panel {
+    margin:0 0 1.2em;
+    padding:0
+  }  
+}
