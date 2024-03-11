@@ -1,6 +1,4 @@
 
-<h2>CART showing 2</h2>
-
 <?php
 /**
  * Cart Page
@@ -22,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<h2>CART showing 2</h2>
+
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
