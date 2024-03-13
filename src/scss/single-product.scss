@@ -1,9 +1,137 @@
 
-.single-product-container{
-    max-width: 1400px;
-    margin: 0 auto;
+
+
+// Width of content 
+.site-main{
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+// Breadcrumps 
+.site-main {
+  
+  .woocommerce-breadcrumb {
+     
+      font-size: 12px;
+      padding: 6px 0 6px;
+     // border-bottom: 1px solid var(--header-border-color);
+    
+     a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-decoration: none;
+      color: #36548b;
+     } 
+
+     a:hover{
+      text-decoration: underline;
+     }
+
   }
 
+}
+
+//Product image and gallery - START
+.gallery-meta-flex-wrap{
+  .woocommerce-product-gallery{
+    width: 100% !important;
+  }
+
+  /*.woocommerce-product-gallery__image{
+    width: 520px;
+  } */
+
+  .flex-control-nav{
+
+    li{
+      max-width: 80px;
+    }
+  }
+
+}
+
+
+
+//Product image and gallery - END
+
+.summary{
+    h1.product_title{
+    font-size: 24px;
+    line-height: 1.21;
+    color:#3c4b71;
+    font-weight: 600;
+   }
+
+   .star-rating span::before{
+    color: #eac701;
+   }
+
+   
+   p.price{
+    font-size: 24px;
+    font-weight: 500;
+    color:#3c4b71;
+   }
+
+   .woocommerce-product-details__short-description{
+
+    h4{
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    p{
+      color: #343434;
+    }
+    }
+
+    p.stock::before{
+        content: "Available Units: ";
+        color: rgb(54, 54, 54);
+      
+      
+    }
+    //Quantity selector and add to cart button
+    form.cart{
+    
+    margin-bottom: 16px !important;
+
+    .quantity .qty{
+      width: 5em;
+      height: 38px;
+    }
+
+    button.single_add_to_cart_button {
+      background-color: #36548b;
+      padding: 0 38px;
+      height: 38px;
+      
+
+      &:hover{
+        background-color: #557abf;
+      }
+    }
+    }
+
+    .product_meta{
+      border-top: 1px solid var(--header-border-color); ;
+      padding-top: 8px;
+
+      span.sku_wrapper{
+        color: rgb(128, 129, 129);
+        font-size: 14px;
+      }
+    }
+
+
+
+}
+
+
+// Single product tab box -- START   
 .single-product-container {
 .woocommerce-tabs {
     padding-top:2em;
@@ -98,3 +226,5 @@
     padding:0
   }  
 }
+
+// Single product tab box -- END   

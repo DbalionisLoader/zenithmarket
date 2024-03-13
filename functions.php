@@ -26,6 +26,7 @@ function zenith_market_theme_support(){
 //Add post-thumbnails incase needed by Woocommerce
 function zenith_market_add_theme_support() {
    add_theme_support( 'post-thumbnails' );
+   add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'zenith_market_add_theme_support' );
 
@@ -154,7 +155,19 @@ add_action( 'after_setup_theme', 'zenith_market_add_woocommerce_support' );
 
 //Change location of SKU template from summary to under the image gallery
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_meta', 30 );
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+//Remove ugly sale tag from single target
+remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+
+
+//Function to change the number of gallery thumbnails inline
+add_filter('woocommerce_product_thumbnails_columns','custom_wc_gallery_thumbnails');
+
+function custom_wc_gallery_thumbnails($columns){
+   return 8;
+}
+
 
 ?>
 
