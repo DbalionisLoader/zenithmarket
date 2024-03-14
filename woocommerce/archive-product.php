@@ -18,103 +18,100 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+
+/**
+ * Hook: woocommerce_before_main_content.
+ *
+ * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+ * @hooked woocommerce_breadcrumb - 20
+ * @hooked WC_Structured_Data::generate_website_data() - 30
+ */
+do_action( 'woocommerce_before_main_content' );
+
 ?>
-
-<?php 
-    get_header();
-
-    $current_category = get_queried_object();
-    $category_slug = $current_category->slug;
-?>
-
-
-
-<main class="wrap container-fluid p-0 m-0">
-    <div class="container mt-5 p-0">
-        <h2>WOOCOMMMERCE.PHP OVERRIDING </h2>
-<!-- 
-    * Hook: woocommerce_show_page_title
-    * Show page title using filter and action hook
--->
-<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title mb-5 text-center"><?php woocommerce_page_title(); ?></h1>
+<header class="woocommerce-products-header">
+	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
 
 	<?php
 	/**
 	 * Hook: woocommerce_archive_description.
-	 * Show the description for the archive(category) - ensure
+	 *
 	 * @hooked woocommerce_taxonomy_archive_description - 10
 	 * @hooked woocommerce_product_archive_description - 10
 	 */
 	do_action( 'woocommerce_archive_description' );
 	?>
-<?php    
-//Current page information 
-   $paged = get_query_var('paged') ? get_query_var('paged') : 1; // Get current page number or default to 1
+</header>
+<?php
+if ( woocommerce_product_loop() ) {
 
-
-
-   $args = array(
-    'post_type'      => 'product', //Woo Products
-    'posts_per_page' => 4,        //Products per page
-    'paged' =>  $paged,            //Get the page number - to use for pagination
-    'order' => 'DESC',             //Product order
-    'post_status' => 'publish',
-    'tax_query'      => array(
-        array(
-            'taxonomy' => 'product_cat',  // Use 'product_cat' for product categories
-            'field'    => 'slug',
-            'terms'    => $category_slug,  // Category slug from the URL
-        ),
-    ),
-
-   );
-
-$products = new WP_Query( $args );
-//Test query output
-//echo '<pre/>';
-//print_r($products);
+	/**
+	 * Hook: woocommerce_before_shop_loop.
+	 *
+	 * @hooked woocommerce_output_all_notices - 10
+	 * @hooked woocommerce_result_count - 20
+	 * @hooked woocommerce_catalog_ordering - 30
+	 */
+	do_action( 'woocommerce_before_shop_loop' );
 ?>
 
-<div class="container">
-    <div id="ajax-product-container" class="d-flex flex-wrap">
-    <?php
-    if ( $products->have_posts() ) :
-        while ( $products->have_posts() ) : $products->the_post();
-        ?>
-        <div class="col-lg-6  mb-5">
-            <?php  get_template_part( 'template-parts/product' );// This will include the content-product.php template ?> 
-        </div>
-        <?php    
-    endwhile;
-    wp_reset_postdata();
-else :
-    echo esc_html__( 'No products found', 'your-text-domain' );
-endif;
-    ?> 
-    </div> <!-- Product loop container end here -->
-</div>
-   <div class="pagination d-flex justify-content-center align-items-center mb-5">
-        <!-- Transfer paginate link to template file in future -->
-        <?php
-     
+<div class="container mt-5">
+	<?php
+	woocommerce_product_loop_start();
 
-        echo paginate_links(array(
-            'total' => $products->max_num_pages,
-            'type' => 'list',
-            'current' => $paged,
-            'format' => '?paged=%#%',
-            'echo' => 'true',
-            'prev_text' => __('&laquo; Prev'),
-            'next_text' => __(' Next &raquo'),
-    
-        ));
-        ?>
-   
-</div> <!-- store div section ends here-->
-</main>
+	if ( wc_get_loop_prop( 'total' ) ) {
+		while ( have_posts() ) {
+			the_post();
 
-<?php 
-    get_footer();
-?>
+			/**
+			 * Hook: woocommerce_shop_loop.
+			 */
+			do_action( 'woocommerce_shop_loop' ); 
+			?>
+			<div class="col-lg-6  mb-5">
+			<?php wc_get_template_part( 'template-parts/product'); 
+			?>
+			</div>
+			<?php
+		}
+	}
+
+	woocommerce_product_loop_end();?>
+
+</div><!-- Product loop container end here -->
+<?php
+	/**
+	 * Hook: woocommerce_after_shop_loop.
+	 *
+	 * @hooked woocommerce_pagination - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop' );
+} else {
+	/**
+	 * Hook: woocommerce_no_products_found.
+	 *
+	 * @hooked wc_no_products_found - 10
+	 */
+	do_action( 'woocommerce_no_products_found' );
+}
+
+
+
+
+/**
+ * Hook: woocommerce_after_main_content.
+ *
+ * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+ */
+do_action( 'woocommerce_after_main_content' );
+
+/**
+ * Hook: woocommerce_sidebar.
+ *
+ * @hooked woocommerce_get_sidebar - 10
+ */
+do_action( 'woocommerce_sidebar' );
+
+get_footer( 'shop' );
