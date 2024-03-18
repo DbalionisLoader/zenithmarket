@@ -160,15 +160,30 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_me
 //Remove ugly sale tag from single target
 remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 
+//Remove notice box from product loop @archive-product.php
+remove_action('woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10);
 
 //Function to change the number of gallery thumbnails inline
 add_filter('woocommerce_product_thumbnails_columns','custom_wc_gallery_thumbnails');
 
-function custom_wc_gallery_thumbnails($columns){
+function custom_wc_gallery_thumbnails(){
    return 8;
 }
 
+//Register widget sidebar
+function zenith_market_widget_init(){
+   register_sidebar(array(
+      'name' => __('Primary Sidebar', 'zenith-market'),
+      'id' => 'primary-sidebar',
+      'description' => __('Sidebar for woocommerce filter widgets'),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+   ));
+}
 
+add_action('widgets_init', 'zenith_market_widget_init');
 ?>
 
 

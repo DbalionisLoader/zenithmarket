@@ -44,22 +44,34 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
-<?php
-if ( woocommerce_product_loop() ) {
 
-	/**
-	 * Hook: woocommerce_before_shop_loop.
-	 *
-	 * @hooked woocommerce_output_all_notices - 10
-	 * @hooked woocommerce_result_count - 20
-	 * @hooked woocommerce_catalog_ordering - 30
-	 */
-	do_action( 'woocommerce_before_shop_loop' );
-?>
+<div class="filter-archive-container row">
 
-<div class="container mt-5">
 	<?php
-	woocommerce_product_loop_start();
+	//Add sidebar from sidebar.php 
+	do_action( 'woocommerce_sidebar' );
+	?>
+	<div class="product-results-container col-lg-9">
+	<?php
+		if ( woocommerce_product_loop() ) {
+		?>
+		<div class="sorting-container d-flex justify-content-between">
+			<?php
+			/**
+	 		* Hook: woocommerce_before_shop_loop.
+	 		*
+	 		* @hooked woocommerce_output_all_notices - 10
+			* @hooked woocommerce_result_count - 20
+			* @hooked woocommerce_catalog_ordering - 30
+	 		*/
+			do_action( 'woocommerce_before_shop_loop' );
+			?>
+		</div>
+
+
+	<div class="container mt-5">
+	<?php
+		woocommerce_product_loop_start();
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
@@ -97,9 +109,10 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 
-
-
-
+?>
+	</div> <!-- END of product-results-container div -->
+</div> <!-- END of filter-product-container div -->
+<?php
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -112,6 +125,6 @@ do_action( 'woocommerce_after_main_content' );
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action( 'woocommerce_sidebar' );
+
 
 get_footer( 'shop' );
