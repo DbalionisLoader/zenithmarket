@@ -29,7 +29,7 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="woocommerce-products-header">
+<header class="woocommerce-products-header mt-4 mb-5">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
@@ -82,7 +82,7 @@ do_action( 'woocommerce_before_main_content' );
 			 */
 			do_action( 'woocommerce_shop_loop' ); 
 			?>
-			<div class="col-lg-6  mb-5">
+			<div class="col-6  mb-5">
 			<?php wc_get_template_part( 'template-parts/product'); 
 			?>
 			</div>
@@ -93,6 +93,7 @@ do_action( 'woocommerce_before_main_content' );
 	woocommerce_product_loop_end();?>
 
 </div><!-- Product loop container end here -->
+	<div class="woocommerce">
 <?php
 	/**
 	 * Hook: woocommerce_after_shop_loop.
@@ -109,7 +110,8 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_no_products_found' );
 }
 
-?>
+?>	
+	</div>
 	</div> <!-- END of product-results-container div -->
 </div> <!-- END of filter-product-container div -->
 <?php

@@ -21,11 +21,11 @@
 
     ?>
     <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
             <div class="product mb-5">
-                <div class="product-image">
+                <div class="product-image text-center">
                     <a href="<?php echo esc_url($product_link) ?>">
-                      <img  src="<?php echo esc_url($product_thumbnail)?> " alt="<?php echo esc_url($product_title)?>">
+                      <img  src="<?php echo esc_url($product_thumbnail)?> " alt="<?php echo esc_url($product_title)?>" class="text-center">
                     </a>
                 <?php 
                 if ($is_product_on_sale){
@@ -39,34 +39,32 @@
             </div> 
         </div>
         <!-- Start of product information - Product title, stock, extras, price and add to card -->
-        <div class="col-6">
-            <div class="product-info">
-                <h3 class="product-title h5"><?php echo esc_html($product_title)?> </h3>
-                <h4 class="product-quantity h6 "><?php echo wc_get_stock_html($product)?></h4>
-                    <hr>
-                        <ul class="product-delivery p-0">
-                            <li><span><i class="bi bi-truck"></i> Next Day Delivery </span> </li>
-                            <li><span><i class="bi bi-box"></i> Click & Collect</span></li>
-                        </ul>
-                    <hr>
-                <h4 class="product-price h6"><?php echo wp_kses_post($product_price)?> </h4>
-                <!-- Display sale price here -->
-                <?php
-                    if (! empty($discount_precent)){
-                    ?>
-                    <span class="product-discount h6 text-danger">
-                      Save £<?php echo esc_html($price_saved); ?>
-                    </span>
-                    <?php    
-                    } ?>
-
+        <div class="col-12 col-md-6 product-info">
+           
+               <div class="product-header">
+                    <h3 class="product-title h5"><?php echo esc_html($product_title)?> </h3>
+                    <h4 class="product-quantity h6 "><?php echo wc_get_stock_html($product)?></h4>
+                </div>
+                   <div class="extra-detail-wrap">
+                        <hr class="m-0">
+                            <ul class="product-delivery p-0 m-0 ">
+                                <li><span><i class="bi bi-truck"></i> Next Day Delivery </span> </li>
+                                <li><span><i class="bi bi-box"></i> Click & Collect</span></li>
+                            </ul>
+                        <hr class="m-0">
+                    </div> 
+                <div class="product-price-wrap"> 
+                    <h4 class="product-price h6"><?php echo wp_kses_post($product_price)?> </h4>
+                </div>   
                 <!-- Add to card button here-->
-                <!-- To add product to card, create a url link by combining site url + add-to-card + product id -->
                 <!-- CARE WITH add-to-cart spelling-->
-                <div class="mt-3">
-                     <a href="<?php echo esc_url( sprintf( '%1$s/?add-to-cart=%2$s', site_url(), $product_id));?>" class="btn btn-primary"> Add to cart</a> 
+                <div class="archive-button-wrap">
+
+                <?php 
+                 do_action( 'woocommerce_after_shop_loop_item' );
+                 ?>
                 </div>    
-            </div>
+          
         </div>
    
     </div>

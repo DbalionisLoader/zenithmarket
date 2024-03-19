@@ -184,3 +184,54 @@
   color: rgb(17, 147, 5);
 }
 
+//Archive product description - START
+
+.product-info{
+
+  display: flex;
+	flex-direction: column; 
+
+
+
+  .product-header{
+    min-height: 120px;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+  
+  }
+  .extra-detail-wrap{
+    margin-top: auto;
+  }
+
+  .product-price-wrap{
+
+  }
+  .archive-button-wrap{
+    align-self: flex-start;
+	  margin-top: auto;
+    flex: 0 1 auto;
+  }
+}
+
+
+//Archive add to card button - START 
+
+.archive-button-wrap{
+  .button {
+    display: inline-block;
+    width: 140px;
+    padding: 8px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px; /* Adjust font size as needed */
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 5px; /* Adjust the value for more or less rounded corners */
+    text-decoration: none; /* Remove default underline */
+
+  &:hover{
+    background-color: #4170bc;  
+  }  
+}
+
+}
