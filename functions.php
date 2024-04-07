@@ -184,7 +184,17 @@ function zenith_market_widget_init(){
 }
 
 add_action('widgets_init', 'zenith_market_widget_init');
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'zenith_market_refresh_cart_fragment' );
+
+function zenith_market_refresh_cart_fragment($fragments){
+   ob_start();
+   $items_count = WC()->cart->get_cart_contents_count();
+   ?>
+   <span class="minicart-quantity">  <?php echo esc_html($items_count); ?> </span>
+   <?php
+   $fragments['.minicart-quantity'] = ob_get_clean();
+   return $fragments;
+}
+
 ?>
-
-
-
