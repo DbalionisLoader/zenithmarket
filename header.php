@@ -212,12 +212,15 @@ m-0 is used to prevent logo from going outside the container width
                             <nav>
                              <ul class="navbar-nav navbar-light text-white">
                               <li class="nav-item">
+                                <?php 
+
+                                ?>
                                <a class="nav-link ps-0" href="#">
                                  <span class="nav-paint-tab">Custom Paint</span>
                                </a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link ps-0" href="#">
+                                <a class="nav-link ps-0" href="http://soll2test/product-category/deals/">
                                 <span class="nav-deals-tab">Deals</span>
                               </a>
                               </li>

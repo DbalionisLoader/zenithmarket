@@ -197,5 +197,36 @@ function zenith_market_refresh_cart_fragment($fragments){
    return $fragments;
 }
 
+//Function to assign any product which get a sale price to a deals category
+function auto_assign_sale_cat($product_id){
+   //Get individual product 
+   $product = wc_get_product( $product_id );
+
+   if( $product->is_on_sale()){
+      // Add the product to the "deals" category - !!! Make sure to use product ID not the product object !!!
+      wp_set_object_terms($product->get_id(),'deals','product_cat', true);
+   }
+}
+add_action( 'woocommerce_save_product_variation', 'auto_assign_sale_cat', 10, 2 );
+add_action( 'woocommerce_update_product', 'auto_assign_sale_cat' );
+
+//Function to assign any existing deal products to the 
+function assign_existing_products_to_sale_category() {
+   // Get all products
+   $products = wc_get_products( array(
+       'status' => 'publish',
+       'limit' => -1,
+   ) );
+
+   foreach ( $products as $product ) {
+       // Check if the product has a sale price set
+       if ( $product->is_on_sale() ) {
+           // Add the product to the "deals" category
+           wp_set_object_terms( $product->get_id(), 'deals', 'product_cat', true );
+       }
+   }
+}
+add_action( 'init', 'assign_existing_products_to_sale_category' );
+
 
 ?>
