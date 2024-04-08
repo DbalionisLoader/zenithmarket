@@ -18,7 +18,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
+?>
+<?php
 global $product;
 
 echo apply_filters(

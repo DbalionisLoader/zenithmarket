@@ -29,19 +29,17 @@ m-0 is used to prevent logo from going outside the container width
                         -->
             <div class="row m-0 align-self-center justify-content-between text-right">
               <!-- ** SITE LOGO - START  **-->
-              <div class="col-5 col-xl-1 col-lg-1 p-0 me-0 me-lg-3 me-xl-0 logo order-first align-self-center align-self-lg-start">
+              <div class="col-5 col-xl-1 col-lg-1 p-0 me-0 me-lg-3 me-xl-0 logo order-first align-self-center align-self-lg-center">
                 <a class="navbar-brand" href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/sol2.webp" alt="Soll.uk Automotive Paint Logo" /></a>
               </div>
               <!-- SITE LOGO - END  -->
               <!-- ** SEARCH BAR - START ** -->
-              <div class="col-12 col-xl-4 col-lg-4 mr-auto order-last order-lg-2 p-0 mt-3 mb-3 mt-lg-0 mb-lg-0">
-                <div class="search-bar">
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" aria-label="Search" placeholder="What are you looking for?" />
-                    <button class="btn search-button-outline" type="submit">
-                      <i class="bi bi-search"></i>
-                    </button>
-                  </form>
+              <div class="col-12 col-xl-4 col-lg-4 mr-auto order-last order-lg-2 p-0 mt-3 mb-3 mt-lg-0 mb-lg-0 align-self-lg-center">
+                <div class="search-bar ">
+                 
+                  <?php
+                   echo do_shortcode('[fibosearch]'); 
+                  ?>
                 </div>
               </div>
               <!-- SEARCH BAR end here  -->

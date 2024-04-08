@@ -60,3 +60,9 @@ body{
     max-width: unset;
     line-height: 1.15; //Different browsers use different "normal" line heights
 }
+
+//Search bar - START
+
+.dgwt-wcas-sf-wrapp   .dgwt-wcas-search-submit::before {
+    border: none !important;
+}
