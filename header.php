@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,9 +23,9 @@ m-0 is used to prevent logo from going outside the container width
         <div class="row m-0 main-header-layout-row">
           <div class="col-xl-12 col-lg-12 p-0 position-static">
             <!-- 
-                           Row 1 for searchbar and icons, 
-                           Row 2 for nav links
-                        -->
+             Row 1 for searchbar and icons, 
+             Row 2 for nav links
+            -->
             <div class="row m-0 align-self-center justify-content-between text-right">
               <!-- ** SITE LOGO - START  **-->
               <div class="col-5 col-xl-1 col-lg-1 p-0 me-0 me-lg-3 me-xl-0 logo order-first align-self-center align-self-lg-center">
@@ -36,7 +35,7 @@ m-0 is used to prevent logo from going outside the container width
               <!-- ** SEARCH BAR - START ** -->
               <div class="col-12 col-xl-4 col-lg-4 mr-auto order-last order-lg-2 p-0 mt-3 mb-3 mt-lg-0 mb-lg-0 align-self-lg-center">
                 <div class="search-bar ">
-                 
+                  <!-- Use fibosearch plugin and setting to customize the search bar and results -->
                   <?php
                    echo do_shortcode('[fibosearch]'); 
                   ?>
@@ -59,8 +58,7 @@ m-0 is used to prevent logo from going outside the container width
                   <!-- BASKET ICON START  -->
                   <div class="widget-wrap">
                     <div class="widget-header">
-                      <!-- Add woocommerce cart url and count here  -->
-                      
+                      <!-- Woocommerce cart url and count here  -->
                       <?php
                       //$items_count stores the cart product count 
                       $items_count = WC()->cart->get_cart_contents_count();
@@ -86,7 +84,7 @@ m-0 is used to prevent logo from going outside the container width
                 </nav>
               </div>
             </div>
-            <div class="row main-menu-line mx-0 px-0">
+            <div class="row main-menu-line mt-lg-3 mx-0 px-0">
               <!-- Off-canvas menu structure -->
               <nav class="navbar navbar-expand-lg col-12">
                 <div class="offcanvas offcanvas-start text-bg-light" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" tabindex="-1">
@@ -99,7 +97,7 @@ m-0 is used to prevent logo from going outside the container width
                   <div class="offcanvas-body">
                     <div class="col-12 px-0 position-static">
                       <div class="justify-content-start" id="mobile_nav">
-                        <div class="d-flex flex-row">
+                        <div class="d-flex flex-column flex-lg-row justify-content-lg-between">       <!--  HEADER MENU GROUP SPACING CONTROL HERE-->
                           <ul class="navbar-nav navbar-light text-white">
                             <li class="nav-item">
                               <a class="nav-link ps-0" href="#">Home</a>
@@ -151,121 +149,81 @@ m-0 is used to prevent logo from going outside the container width
                             <!--  MEGA MEMU 2 - dmenu, megamenu-li are custom classes -->
                             <li class="nav-item dropdown position-static dmenu">
                               <!--  Standard bootstrap classes for the drop down toggle -->
-                              <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" href aria-expanded="false" aria-haspopup="true">All Services</a>
+                              <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" href aria-expanded="false" aria-haspopup="true">Components</a>
                               <!-- Add menu ICON HERE  -->
                               <!-- Custom classes are megamenu, sm-menu  -->
-                              <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                                <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
                                 <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
-                                <div class="row">
+                                 <div class="row">
                                   <div class="col-sm-6 col-lg-3 border-right mb-4">
                                     <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
-                                    <h6>Ecommerce</h6>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento
-                                      2 Migration</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Odoo
-                                      ERP</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Mobile
-                                      Commerce</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> CRM for
-                                      Commerce</a>
+                                   
                                   </div>
-                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                    <h6>LAMP Technology</h6>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-php"></i> PHP Website
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-circle"></i> Phalcon
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-laravel"></i> Laravel
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-wordpress-simple"></i>
-                                      WordPress Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-php"></i> Symfony
-                                      Development</a>
-                                  </div>
-                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                    <h6>Mobile</h6>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-apple"></i> iPhone App
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-android"></i> Android
-                                      App Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Phone
-                                      Gap App Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-tablet-alt"></i>
-                                      Hybrid App Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Ionic
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-tablet-alt"></i> React
-                                      Native Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i>
-                                      Xamarin App Development</a>
-                                  </div>
-                                  <div class="col-sm-6 col-lg-3 mb-4">
-                                    <h6>Node.js & MongoDB</h6>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cubes"></i> Full Stack
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cube"></i> MEAN
-                                      Stack</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-angular"></i>
-                                      AngularJS</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-node-js"></i> Node.JS
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-leaf fa-rotate-90"></i>
-                                      MongoDB Development</a>
-                                  </div>
+                                 </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                    <h6>Microsoft Technology</h6>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i>
-                                      Microsoft App Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> MS
-                                      Desktop App Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i>
-                                      SharePoint Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> ASP.NET
-                                      Development</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> CMS
-                                      Development</a>
-                                  </div>
-                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                    <h6>Cloud Services</h6>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cloud"></i> DevOps</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-amazon"></i> Amazon
-                                      Web Services</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> Azure
-                                      Cloud Service</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-google"></i> Google
-                                      App Engine Services</a>
-                                  </div>
-                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                    <h6>Enterprise Services</h6>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Augmented
-                                      Reality</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> CRM</a>
-                                    <a class="dropdown-item" href="#"><i class="fab fa-buromobelexperte"></i>
-                                      Enterprise Mobility Services</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-th-large"></i>
-                                      Blockchain Services</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i>
-                                      Business Intelligence</a>
-                                  </div>
-                                  <div class="col-sm-6 col-lg-3 mb-4">
-                                    <h6>Digital Marketing</h6>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Digital
-                                      Marketing</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> PPC
-                                      Management Services</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i>
-                                      E-commerce SEO Services</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i>
-                                      Conversion Rate Optimization</a>
-                                  </div>
-                                </div>
-                              </div>
                             </li>
-                          </ul>
+                            <li class="nav-item dropdown position-static dmenu">
+                              <!--  Standard bootstrap classes for the drop down toggle -->
+                              <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" href aria-expanded="false" aria-haspopup="true">Monitors</a>
+                              <!-- Add menu ICON HERE  -->
+                              <!-- Custom classes are megamenu, sm-menu  -->
+                                <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                                <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
+                                 <div class="row">
+                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
+                                   
+                                  </div>
+                                 </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static dmenu">
+                              <!--  Standard bootstrap classes for the drop down toggle -->
+                              <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" href aria-expanded="false" aria-haspopup="true">Laptops</a>
+                              <!-- Add menu ICON HERE  -->
+                              <!-- Custom classes are megamenu, sm-menu  -->
+                                <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                                <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
+                                 <div class="row">
+                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
+                                   
+                                  </div>
+                                 </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static dmenu">
+                              <!--  Standard bootstrap classes for the drop down toggle -->
+                              <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" href aria-expanded="false" aria-haspopup="true">Networking</a>
+                              <!-- Add menu ICON HERE  -->
+                              <!-- Custom classes are megamenu, sm-menu  -->
+                                <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                                <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
+                                 <div class="row">
+                                  <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <!-- Menu menu layout is GRID, 4 colums per row on desktop/ 2 on mobile -->
+                                   
+                                  </div>
+                                 </div>
+                                </div>
+                            </li>
+                          </ul>   
+                          <div class="right-menu-group ">
+                            <nav>
+                             <ul class="navbar-nav navbar-light text-white">
+                              <li class="nav-item">
+                               <a class="nav-link ps-0" href="#">
+                                 <span class="nav-paint-tab">Custom Paint</span>
+                               </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link ps-0" href="#">
+                                <span class="nav-deals-tab">Deals</span>
+                              </a>
+                              </li>
+                             </ul>
+                            </nav>
+                          </div>
                         </div>
                       </div>
                     </div>
