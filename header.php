@@ -211,10 +211,13 @@ m-0 is used to prevent logo from going outside the container width
                           <div class="right-menu-group ">
                             <nav>
                              <ul class="navbar-nav navbar-light text-white">
-                              <li class="nav-item">
-                                <?php 
-
-                                ?>
+                              
+                             <li class="nav-item">
+                               <a class="nav-link ps-0" href="#">
+                                 <span class="nav-paint-tab">Brands</span>
+                               </a>
+                              </li>
+                             <li class="nav-item">
                                <a class="nav-link ps-0" href="#">
                                  <span class="nav-paint-tab">Custom Paint</span>
                                </a>
