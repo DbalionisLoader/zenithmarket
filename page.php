@@ -24,9 +24,8 @@
 
 get_header(); ?>
 
-<h2>Page.php working </h2>
-<div id="primary" class="content-area ">
-    <main id="main" class="site-main homepage" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="page-wrap mt-4" role="main">
 
         <?php
         // Start the loop

@@ -11,9 +11,17 @@
 }
 
 .homepage{
-  max-width: 1400px;
+  max-width: 1560px;
   margin: 0 auto;
+  padding: 0 3%;
 }
+
+.page-wrap{
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
 
 .service-bar{
   max-height: 50px;
@@ -150,6 +158,38 @@
 
 // Woocommerece Product CSS
 
+
+.woocommerce-products-header{
+  
+  h1.woocommerce-products-header__title{
+      color: rgb(52, 85, 139);
+      font-size: 30px;
+  }
+
+  .product-header-decorative-line{
+  
+    height: 5px;
+    border-width: 0px;
+    color: rgb(220, 220, 220);
+    background-color: gray;
+    opacity: 100%;
+
+    &::before{
+      position: absolute;
+      content:'';
+      height: 5px;
+      border-width: 0px;
+      color: rgb(205, 12, 12);
+      background-color: rgb(205, 12, 12);
+      width: 70px;
+      z-index: 99;
+    }
+      
+    }
+  }
+
+
+
 .product-image{
   
   text-align: right;
@@ -234,4 +274,22 @@
   }  
 }
 
+}
+
+
+// CHECKOUT CSS - MOVE TO SEPARATE SCSS FILE
+
+.wc-block-components-product-metadata{
+  display: block;
+}
+
+.wc-block-components-checkout-place-order-button{
+  background-color: #4170bc;
+  border: none;
+  color:white;
+
+  &:hover{
+  background-color: #224d92;  
+  border: none;
+  }
 }

@@ -13,11 +13,14 @@ Author URI: https://dovydasbalionis.co.uk/
 /* HEADER LAYOUT STYLES */
 
 .header-main{
-  padding: 0 3%; /* Add a variable left right padding depending on device */
+   /* Add a variable left right padding depending on device */
+  padding: 0 3%;
   margin: 0 auto; /* Center nav bar */
-  max-width: 1480px; /* Contol max width of desktop navbar section */
+  max-width: 1560px; /* Contol max width of desktop navbar section */
   font-family: 'Open Sans', sans-serif; 
 }
+
+
 
 .header-top-spacing {
   max-width: 1480px !important;
@@ -39,7 +42,6 @@ Author URI: https://dovydasbalionis.co.uk/
 /* SITE LOGO - start here */
 .logo img{
   width: 200px !important;
-  height: 30px !important; 
   max-width: 200px;
 }
 
@@ -208,7 +210,7 @@ Create a menu wide mega menu container */
 @media (max-width: 480px) {
  
   .logo img{
-    width: 145px !important;
+    max-width: 180px !important;
     max-height: auto;
    /*  height: 30px !important;  */
   /*   max-width: 200px; */

@@ -32,6 +32,7 @@ do_action( 'woocommerce_before_main_content' );
 <header class="woocommerce-products-header mt-4 mb-5">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+		<hr class="p-0 product-header-decorative-line">
 	<?php endif; ?>
 
 	<?php
