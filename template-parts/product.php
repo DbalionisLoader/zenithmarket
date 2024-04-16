@@ -9,6 +9,7 @@
  $product = wc_get_product( $product_id);
  $product_thumbnail = get_the_post_thumbnail_url( $product_id, 'medium' ); //Param: Product ID, size of image
  $product_title = get_the_title();
+ $product_rating = wc_get_rating_html( $product->get_average_rating());
  $product_link = get_the_permalink();
  $sale_price = $product->get_sale_price();
  $regular_price = $product->get_regular_price();
@@ -40,20 +41,26 @@
         </div>
         <!-- Start of product information - Product title, stock, extras, price and add to card -->
         <div class="col-12 col-md-6 product-info">
-           
-               <div class="product-header">
+            <a href="<?php echo esc_url($product_link) ?>">
+               <div class="product-header d-flex flex-column ">
                     <h3 class="product-title h5"><?php echo esc_html($product_title)?> </h3>
-                    <h4 class="product-quantity h6 "><?php echo wc_get_stock_html($product)?></h4>
+            </a>    
+                    <div class="rating-wrap woocommerce mb-2">
+                     <?php echo ($product_rating) ?>
+                    </div>
+                  
+                    
                 </div>
                    <div class="extra-detail-wrap">
-                        <hr class="m-0">
-                            <ul class="product-delivery p-0 m-0 ">
+                     <div class="product-quantity h6 p-0"><?php echo wc_get_stock_html($product)?></div>
+                        <hr class="m-0 p-0">
+                            <ul class="product-delivery p-0 mt-2 mb-2 ">
                                 <li><span><i class="bi bi-truck"></i> Next Day Delivery </span> </li>
                                 <li><span><i class="bi bi-box"></i> Click & Collect</span></li>
                             </ul>
                         <hr class="m-0">
                     </div> 
-                <div class="product-price-wrap"> 
+                <div class="product-price-wrap mt-2 mb-2"> 
                     <h4 class="product-price h6"><?php echo wp_kses_post($product_price)?> </h4>
                 </div>   
                 <!-- Add to card button here-->

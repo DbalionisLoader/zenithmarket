@@ -39,11 +39,12 @@ get_header( 'shop' ); ?>
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			<?php wc_get_template_part( 'content', 'single-product' ); //Reference content-single-product template for HTML structure ?> 
 
 		<?php endwhile; // end of the loop. ?>
 		</div>
 
+	
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.

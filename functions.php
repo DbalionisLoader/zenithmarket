@@ -166,6 +166,11 @@ remove_action('woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 
 //Function to change the number of gallery thumbnails inline
 add_filter('woocommerce_product_thumbnails_columns','custom_wc_gallery_thumbnails');
 
+//Remove related product from SINGLE product template
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+
+
+
 function custom_wc_gallery_thumbnails(){
    return 8;
 }
@@ -210,7 +215,7 @@ function auto_assign_sale_cat($product_id){
 add_action( 'woocommerce_save_product_variation', 'auto_assign_sale_cat', 10, 2 );
 add_action( 'woocommerce_update_product', 'auto_assign_sale_cat' );
 
-//Function to assign any existing deal products to the 
+//Function to assign any existing deal products to the deal category
 function assign_existing_products_to_sale_category() {
    // Get all products
    $products = wc_get_products( array(
@@ -226,7 +231,15 @@ function assign_existing_products_to_sale_category() {
        }
    }
 }
-add_action( 'init', 'assign_existing_products_to_sale_category' );
+//Enable function only if products DON'T have deal category assigned
+//add_action( 'init', 'assign_existing_products_to_sale_category' );
 
+
+//Custom Woo Action Hooks
+//function zenith_market_custom_product_rating(){
+ //  do_action('zenith_market_custom_product_rating');
+//}
+
+//do_action('zenith_market_custom_product_rating', 'woocommerce_template_loop_rating', 1);
 
 ?>
