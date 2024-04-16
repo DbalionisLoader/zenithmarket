@@ -156,9 +156,9 @@
   }
 }
 
-// Woocommerece Product CSS
+// Woocommerece Archive Product CSS - START
 
-
+// Archive Header
 .woocommerce-products-header{
   
   h1.woocommerce-products-header__title{
@@ -168,19 +168,19 @@
 
   .product-header-decorative-line{
   
-    height: 5px;
+    height: 2px;
     border-width: 0px;
-    color: rgb(220, 220, 220);
-    background-color: gray;
+    color: #e5e5e5;
+    background-color: #e5e5e5;
     opacity: 100%;
 
     &::before{
       position: absolute;
       content:'';
-      height: 5px;
+      height: 2px;
       border-width: 0px;
-      color: rgb(205, 12, 12);
-      background-color: rgb(205, 12, 12);
+      color: #de3838;
+      background-color: #de3838;
       width: 70px;
       z-index: 99;
     }
@@ -188,7 +188,27 @@
     }
   }
 
+//Archive Sidebar
 
+.filter-top-section, {
+
+  h2{
+    color: #284691;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+}
+
+.bapf_sfilter{
+  .bapf_head{
+      h3{
+        color: #284691;
+      font-size: 20px;
+      font-weight: 400;
+      }
+  }
+}
 
 .product-image{
   
@@ -224,7 +244,7 @@
   color: rgb(17, 147, 5);
 }
 
-//Archive product description - START
+//Archive product description 
 
 .product-info{
 
@@ -254,7 +274,7 @@
 }
 
 
-//Archive add to card button - START 
+//Archive add to card button
 
 .archive-button-wrap{
   .button {
@@ -263,11 +283,11 @@
     padding: 8px 0px;
     text-align: center;
     font-weight: bold;
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 16px; 
     color: white;
     background-color: var(--primary-color);
-    border-radius: 5px; /* Adjust the value for more or less rounded corners */
-    text-decoration: none; /* Remove default underline */
+    border-radius: 5px; 
+    text-decoration: none;
 
   &:hover{
     background-color: #4170bc;  
@@ -276,7 +296,7 @@
 
 }
 
-
+// Archive Product  - END
 // CHECKOUT CSS - MOVE TO SEPARATE SCSS FILE
 
 .wc-block-components-product-metadata{

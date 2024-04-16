@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="footer-wrap border-top pt-3 pb-3">
+<div class="footer-wrap border-top pt-3 pb-3 mt-5">
  <div class="container">
   <!-- FOOTER USEFUL LINKS SECTION -->
    <footer class="row  my-2 my-md-5">
