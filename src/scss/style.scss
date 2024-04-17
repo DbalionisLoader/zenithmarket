@@ -209,7 +209,7 @@
 
 //Archive Sidebar
 
-.filter-top-section, {
+.filter-top-section {
 
   h2{
     color: #284691;
@@ -218,7 +218,28 @@
   }
 
 }
+.filter-reset-button{
 
+  .bapf_sfilter{
+    margin-bottom: 0px;
+  }
+
+  .bapf_body{
+    button.bapf_reset{
+      background-color: unset;
+      color: #284691;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: underline;
+      text-transform: capitalize;
+
+    &:hover{
+      background-color: unset;
+    }  
+    }
+  }
+}
 .bapf_sfilter{
   .bapf_head{
       h3{

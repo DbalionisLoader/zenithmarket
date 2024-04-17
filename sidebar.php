@@ -13,9 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div id="primary-sidebar" class="primary-sidebar col-lg-3">
-    <div class="filter-top-section pt-0 pb-2">
+    <div class="filter-top-section pt-0 pb-0 d-flex justify-content-between">
         <h2>Filters</h2>
-        <hr>
+        <div class="filter-reset-button"><?php echo do_shortcode('[br_filter_single filter_id=174]') ?></div>
+        
     </div>
+    <hr>
     <?php dynamic_sidebar( 'primary-sidebar' ); ?>
 </div>
