@@ -6,7 +6,7 @@
     <section class="">
         <?php get_template_part('template-parts/carousel/service', 'carousel'); ?>
     </section>
-    <section class="homepage banner-section mt-2">
+    <section class="homepage banner-section">
         <?php get_template_part('template-parts/carousel/banner', 'carousel'); ?>
     </section>
     <section class="homepage landing-category-grid">

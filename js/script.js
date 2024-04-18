@@ -57,6 +57,7 @@ $(document).ready(function() {
         slidesToScroll: 1, 
         autoplay: true,
         useTransform: false,
+        lazyLoad: 'ondemand',
         autoplaySpeed: 6000
 
     });
