@@ -74,7 +74,28 @@ $(document).ready(function() {
         lazyLoad: 'ondemand',
         autoplaySpeed: 6000,
         prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-        nextArrow: '<button type="button" class="slick-next">Next</button>'
+        nextArrow: '<button type="button" class="slick-next">Next</button>',
+        responsive: [
+            {
+                breakpoint: 960, // Tablet breakpoint
+                settings: {
+                  
+                    slidesToShow: 3, // Show 2 names on tablet
+                    slidesToScroll: 1,  
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                }
+            },
+            {
+                breakpoint: 480, // Mobile breakpoint
+                settings: {
+                    slidesToShow: 2, // Show 1 name on mobile
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                }
+            }
+        ]
 
     });
 });

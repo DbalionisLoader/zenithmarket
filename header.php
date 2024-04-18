@@ -1,3 +1,21 @@
+<?php
+/**
+ * The header for zenith Market theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <hr>
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package zenith_market
+ */
+
+$my_account_page_id = get_option('woocommerce_myaccount_page_id');
+$my_account_url = get_permalink( $my_account_page_id);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,10 +66,10 @@ m-0 is used to prevent logo from going outside the container width
                   <!-- Individual icons go here  -->
                   <div class="widget-wrap px-0 mx-0">
                     <!-- Account icon  -->
-                    <div class="widget-header  px-0 mx-0">
-                      <a class="icon  px-0 mx-0" href>
-                        <i class="bi bi-person-fill  px-0 mx-0"></i>
-                        <span>Account</span>
+                    <div class="widget-header  px-0 mx-0 ">
+                      <a class="icon  px-0 mx-0 " href="<?php echo esc_url($my_account_url); ?>">
+                        <i class="bi bi-person-fill px-0 mx-0"></i>
+                        <span class="p-0 m-0">Account</span>
                       </a>
                     </div>
                   </div>
