@@ -11,7 +11,7 @@
 }
 
 
-.homepage, .site-main{
+.homepage,.service-carousel-wrap,.site-main{
   max-width: 1560px;
   margin: 0 auto;
   padding: 0 3%;
@@ -34,6 +34,12 @@
 }
 
 // SERVICE CAROUSEL CSS - START
+
+.service-carousel-background{
+  background-color: #f2f2f2;
+}
+
+
 #service-carousel {
   visibility: hidden;
   opacity: 0; /* Start with opacity set to 0 */
@@ -48,11 +54,18 @@
 }
 
 .service-bar-carousel {
-  max-height: 50px ;
+  max-height: 100% ;
+}
+
+//Make parent slick container flex for responsive center alignment
+.slick-track{
+  display: flex;
+  align-items: center;
 }
 
 .service-block {
   
+  margin-right: 36px;
 
   i{
     font-size: 20px;

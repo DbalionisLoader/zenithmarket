@@ -3,10 +3,10 @@
     get_header();
 ?>
 <div class="homepage-section">
-    <section class="homepage service-bar">
+    <section class="">
         <?php get_template_part('template-parts/carousel/service', 'carousel'); ?>
     </section>
-    <section class="homepage banner-section">
+    <section class="homepage banner-section mt-2">
         <?php get_template_part('template-parts/carousel/banner', 'carousel'); ?>
     </section>
     <section class="homepage landing-category-grid1">

@@ -9,7 +9,7 @@
 
         <?php 
             //Array of category slugs wanted to be displayed - use even number of slugs 
-            $category_slugs = array('intel-gaming-pc','custom-pc','desktop-pc','gaming-pc');
+            $category_slugs = array('intel-gaming-pc','custom-pc','desktop-pc','gaming-pc'); // <---------
 
             foreach($category_slugs as $category_slug){
                 $category = get_term_by('slug',$category_slug,'product_cat');

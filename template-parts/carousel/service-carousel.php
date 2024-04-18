@@ -3,8 +3,9 @@
 -->
 
 
-<div class="container-fluid">
-<div class="service-bar-carousel hidden2" id="service-carousel">
+<div class="service-carousel-background">
+ <div class="service-carousel-wrap">
+  <div class="service-bar-carousel hidden2" id="service-carousel">
   <div class="service-block d-flex align-items-center justify-content-center mt-2 mb-2">
      <div class="service-logo pe-3">
         <i class="bi bi-cart3"></i>
@@ -41,5 +42,6 @@
         <p class="p-0 m-0">East and fast returns. T&C applies</p>
     </div>   
   </div>
-</div>
+  </div>
+ </div>
 </div>
