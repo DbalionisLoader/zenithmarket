@@ -4,12 +4,12 @@
  * @package zenithmarket
  */ ?>
 
-<div class="container category-grid mt-5">
+<div class="container category-grid">
     <div class="row">
 
         <?php 
             //Array of category slugs wanted to be displayed - use even number of slugs 
-            $category_slugs = array('intel-gaming-pc','custom-pc','desktop-pc','gaming-pc'); // <---------
+            $category_slugs = array('intel-gaming-pc','custom-pc','desktop-pc','gaming-pc','4k-gaming-pc','laptops','apple-macbooks','gaming-laptops'); // <---------
 
             foreach($category_slugs as $category_slug){
                 $category = get_term_by('slug',$category_slug,'product_cat');
@@ -18,7 +18,7 @@
                     $category_link = get_term_link($category);
 
                     echo '<div class="col-6 col-md-3 mb-3 mb-md-0 category">';
-                        echo '<div class="category-box d-flex flex-column justify-content-center align-items-center">';
+                        echo '<div class="category-box d-flex flex-column justify-content-center align-items-center mt-4">';
                         //Fetch category image here
                         $thumbnail_id = get_woocommerce_term_meta($category->term_id,'thumbnail_id', true);
                         $image = wp_get_attachment_url($thumbnail_id);

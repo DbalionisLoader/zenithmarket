@@ -9,15 +9,17 @@
     <section class="homepage banner-section mt-2">
         <?php get_template_part('template-parts/carousel/banner', 'carousel'); ?>
     </section>
-    <section class="homepage landing-category-grid1">
+    <section class="homepage landing-category-grid">
+    <h2 class="text-center mt-5 front-page-header pb-4 pt-4">Explore Our <span class="header-highlight">Automotive Paint</span> Categories</h2>
         <?php get_template_part('template-parts/category/category', 'grid'); ?>
     </section>
-    <section class="homepage secondary-banner-section">
+    <section class="homepage secondary-banner-section mb-5">
         <div class="container mt-5">
             <a href="#"> <img src=" <?php echo get_template_directory_uri(); ?>/images/temp-paint-mix.png" alt="Test3" class="img-fluid" ></a>
-        </div>          
-    </section class="homepage sale-carousel">
-    <h2 class="text-center mt-5">Shop Deals</h2>
+        </div>    
+    </section>          
+    <section class="homepage sale-carousel mb-5 pb-5">
+    <h2 class="text-center mt-5 pt-4 pb-4 front-page-header">Shop Deals</h2>
     <?php
         $args = array(
         'post_type' => 'product',
@@ -30,7 +32,7 @@
    
         get_template_part('template-parts/carousel/frontpage', 'carousel',['carousel_args' => $carousel_args]); ?>
     </section> 
-    <section class="homepage about-store-frontpage mt-5 mb-5">
+    <section class="homepage about-store-frontpage mt-5 ">
         <div class="container">
         <hr class="m-0 p-0 border-line-frontpage">
         <div class="about-store-text-box">
