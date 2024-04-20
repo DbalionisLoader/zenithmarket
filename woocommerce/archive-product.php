@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://woo.com/document/template-structure/
+ * @see https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.4.0
+ * @version 8.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -28,23 +28,18 @@ get_header( 'shop' );
  */
 do_action( 'woocommerce_before_main_content' );
 
-?>
-<header class="woocommerce-products-header mt-4 mb-5">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-		<hr class="p-0 product-header-decorative-line">
-	<?php endif; ?>
+/**
+ * Hook: woocommerce_shop_loop_header.
+ *
+ * @since 8.6.0
+ *
+ * @hooked woocommerce_product_taxonomy_archive_header - 10
+ */
+do_action( 'woocommerce_shop_loop_header' );
+?> 
+<hr class="p-0 product-header-decorative-line">
 
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</header>
+
 
 <div class="filter-archive-container row">
 
@@ -53,26 +48,25 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_sidebar' );
 	?>
 	<div class="product-results-container col-lg-9">
-	<?php
-		if ( woocommerce_product_loop() ) {
-		?>
-		<div class="sorting-container d-flex justify-content-between">
-			<?php
-			/**
-	 		* Hook: woocommerce_before_shop_loop.
-	 		*
-	 		* @hooked woocommerce_output_all_notices - 10
-			* @hooked woocommerce_result_count - 20
-			* @hooked woocommerce_catalog_ordering - 30
-	 		*/
-			do_action( 'woocommerce_before_shop_loop' );
-			?>
-		</div>
 
+<?php
+if ( woocommerce_product_loop() ) {
+	?>
+	<div class="sorting-container d-flex justify-content-between mb-5">
+	<?php	
+	/**
+	 * Hook: woocommerce_before_shop_loop.
+	 *
+	 * @hooked woocommerce_output_all_notices - 10
+	 * @hooked woocommerce_result_count - 20
+	 * @hooked woocommerce_catalog_ordering - 30
+	 */
+	do_action( 'woocommerce_before_shop_loop' );
+	?>
+	</div>
 
-	<div class="container mt-5">
 	<?php
-		woocommerce_product_loop_start();
+	woocommerce_product_loop_start();
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
@@ -81,21 +75,20 @@ do_action( 'woocommerce_before_main_content' );
 			/**
 			 * Hook: woocommerce_shop_loop.
 			 */
-			do_action( 'woocommerce_shop_loop' ); 
-			?>
+			do_action( 'woocommerce_shop_loop' ); ?>
 			<div class="col-6  mb-5">
-			<?php wc_get_template_part( 'template-parts/product'); 
+			<?php		
+			wc_get_template_part( 'template-parts/product' );
 			?>
 			</div>
 			<?php
 		}
 	}
 
-	woocommerce_product_loop_end();?>
-
-</div><!-- Product loop container end here -->
-	<div class="woocommerce">
-<?php
+	woocommerce_product_loop_end();
+	?>
+	 <div class="woocommerce">
+	<?php		
 	/**
 	 * Hook: woocommerce_after_shop_loop.
 	 *
@@ -110,11 +103,11 @@ do_action( 'woocommerce_before_main_content' );
 	 */
 	do_action( 'woocommerce_no_products_found' );
 }
-
 ?>	
-	</div>
+	 </div>
 	</div> <!-- END of product-results-container div -->
 </div> <!-- END of filter-product-container div -->
+
 <?php
 /**
  * Hook: woocommerce_after_main_content.
@@ -128,6 +121,6 @@ do_action( 'woocommerce_after_main_content' );
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-
+do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );
