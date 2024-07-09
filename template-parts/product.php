@@ -28,7 +28,10 @@
                     <a href="<?php echo esc_url($product_link) ?>">
                       <img  src="<?php echo esc_url($product_thumbnail)?> " alt="Test" class="text-center">
                     </a>
-                    <?php echo esc_url($product_title)?>
+           
+                   <?php //echo esc_url($product_title)?>
+            
+                   
                 <?php 
                 if ($is_product_on_sale){
                 ?> 
