@@ -6,7 +6,7 @@
  */
 
  $product_id = get_the_ID();
- $product = wc_get_product( $product_id);
+ $product = wc_get_product($product_id);
  $product_thumbnail = get_the_post_thumbnail_url( $product_id, 'medium' ); //Param: Product ID, size of image
  $product_title = get_the_title();
  $product_link = get_the_permalink();
