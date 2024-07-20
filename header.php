@@ -236,7 +236,7 @@ m-0 is used to prevent logo from going outside the container width
                                </a>
                               </li>
                              <li class="nav-item">
-                               <a class="nav-link ps-0" href="#">
+                               <a class="nav-link ps-0" href="http://soll2test/colour-services/">
                                  <span class="nav-paint-tab">Custom Paint</span>
                                </a>
                               </li>
