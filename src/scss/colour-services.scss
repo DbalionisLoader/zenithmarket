@@ -1,3 +1,5 @@
+
+
 .cmm-hero-section{
     width: 100%;
     height: 100vh;
@@ -76,14 +78,25 @@
     font-weight: 300;
     color: #ffffff;
     }
+
+ 
 }
 
+//Google widget style
 
+.grw-net-widget-one{
+    justify-content:start !important;
+}
 
-
+//Get rid of widget branding link
+.grw-net-widget {
+    .branding{
+        opacity: 0;
+    }
+}
 
 .cmm-buttons-container{
-   margin-top: 2rem;
+   margin-top: 1rem;
 }
 
 .cmm-button {
@@ -101,6 +114,101 @@
     }
 }
 
-h2 {
-    color: pink;
+
+//Paint matching section -- START
+
+.cmm-paintmatch-section{
+
+    .cmm-paintmatch-wrap{
+        z-index: 1;
+        max-width: 1560px;
+        margin: 0 auto;
+        padding: 15% 3%;
+        overflow: hidden;
+    }
+    
+    .cmm-paintmatch-text-wrap{
+        
+        padding-right: 48px;
+        
+
+        h2{
+          font-size: 3rem;
+          font-weight: 700;   
+          color: #0C2680;
+          margin-bottom: 2rem;
+          letter-spacing: normal;
+
+        }
+
+        p{
+        line-height: 29px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: .3px;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    }
+
 }
+
+//Paint matching section -- END
+
+//Visit Banner -- START
+.cmm-visit-section{
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+
+.cmm-visit-banner{
+    background-color:#2D49DC;
+    max-width: 1560px;
+    color: #ffffff;
+    
+    .cmm-visit-text-container{
+        padding: 3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: rgb(255, 250, 251);
+    }
+
+    p{  
+        margin: 0;
+        padding-bottom: 12px;
+        font-size: 1.2rem; 
+        line-height: 1.25rem;
+        font-weight: 300;
+
+        &:nth-of-type(2){
+            padding-bottom: 24px;
+        }
+    }
+
+    
+    
+    .cmm-banner-image-container {
+        height: auto;
+        }
+
+
+    .cmm-banner-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      
+    }
+}
+
+//Visit Banner -- END
