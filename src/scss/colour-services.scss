@@ -133,7 +133,7 @@
         
 
         h2{
-          font-size: 3rem;
+          font-size: 2.75rem;
           font-weight: 700;   
           color: #0C2680;
           margin-bottom: 2rem;
@@ -141,11 +141,17 @@
 
         }
 
+  
+
         p{
         line-height: 29px;
         font-size: 17px;
         font-weight: 400;
         letter-spacing: .3px;
+        }    
+        
+        .intro-p{
+            font-weight: 500;
         }
     }
 
@@ -160,6 +166,82 @@
 }
 
 //Paint matching section -- END
+
+//Brand logo section -- START
+.cmm-brands-section{
+    background-color: #f6f9fc;
+
+    .cmm-brands-container{
+        max-width: 1560px;
+        margin: 0 auto;
+        padding: 7% 3%;
+        overflow: hidden;
+
+        .cmm-brand-text-box{
+            text-align: center;
+            box-sizing: border-box;
+
+
+            h2{
+                font-size: 2.75rem;
+                font-weight: 700;   
+                color: #0C2680;
+                letter-spacing: normal;
+                margin-bottom: 16px;
+      
+            }
+            
+            p{
+                margin-top: 0;
+                line-height: 29px;
+                font-size: 1.0625rem;
+                font-weight: 400;
+                letter-spacing: .3px;
+                color: #7e7e7f;
+            }
+        }
+
+    }
+
+    .cmm-brand-logo-wrapper{
+
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 2rem;
+
+        .brand-logo-card{
+            position: relative;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 250px;
+            height: 150px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        
+        
+        &:hover {
+            //Add scale and show to increase of card on hover
+            transform: scale(1.05);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px;
+        }
+            
+            img{
+                max-height: 120px;
+                max-width: 250px;
+            }
+
+            
+
+        }
+    }
+}
+//Brand logo section -- END
 
 //Visit Banner -- START
 .cmm-visit-section{
@@ -179,7 +261,7 @@
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.75rem;
         font-weight: 600;
         color: rgb(255, 250, 251);
     }

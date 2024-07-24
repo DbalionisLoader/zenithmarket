@@ -29,7 +29,7 @@ get_header();?>
             <div class="cmm-paintmatch-wrap row">
                 <div class="col-12 col-lg-6 cmm-paintmatch-text-wrap">
                     <h2>Perfect Paint Matching for Your Vehicle</h2>
-                    <p>At Soll, we pride ourselves on delivering the most accurate car paint matching available. Using advanced tools such as spectrophotometers, colour chips, and expert colour tinting, we ensure that we find the exact shade you desire.</p>
+                    <p class="intro-p">At Soll, we pride ourselves on delivering the most accurate car paint matching available. Using advanced tools such as spectrophotometers, colour chips, and expert colour tinting, we ensure that we find the exact shade you desire.</p>
                     <p>Whether you're looking to repair a scratch or give your car a fresh new look, our precise matching techniques will make your vehicle look as good as new. Trust us to bring your dream car's colour to life with unmatched precision and quality.</p>
             </div>
                 <div class="col-12 col-lg-6 cmm-banner-image-container">
@@ -37,6 +37,10 @@ get_header();?>
                 </div>
             </div>
         </section>
+        <section class="cmm-paintbrands-section">
+            
+        </section>
+        <?php get_template_part('template-parts/sections/brand', 'list'); ?>
         <?php get_template_part('template-parts/sections/visit', 'banner'); ?>
     </main>
     <script src="https://grwapi.net/widget.min.js"></script>
