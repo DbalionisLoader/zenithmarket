@@ -1,4 +1,9 @@
-
+.cmm-container{
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 7% 3%;
+    overflow: hidden;
+}
 
 .cmm-hero-section{
     width: 100%;
@@ -123,7 +128,7 @@
         z-index: 1;
         max-width: 1560px;
         margin: 0 auto;
-        padding: 15% 3%;
+        padding: 8% 3%;
         overflow: hidden;
     }
     
@@ -188,6 +193,7 @@
                 color: #0C2680;
                 letter-spacing: normal;
                 margin-bottom: 16px;
+            
       
             }
             
@@ -243,6 +249,130 @@
 }
 //Brand logo section -- END
 
+//Colour matching how to -- START
+
+.cmm-matchsteps-section{
+    background: linear-gradient(rgb(29, 12, 77), rgb(13, 26, 138));
+
+   
+}
+        
+.cmm-title-container{
+    color: white;
+
+        h2{
+            font-size: 44px;
+            font-weight: 600;
+            line-height: 48px;
+            margin-bottom: 24px;
+        }
+
+        p{
+            line-height: 29px;
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: .3px;
+        }
+
+        @media(max-width:992px){
+            margin-bottom: 32px;
+        }
+    }
+
+.cmm-grid-container{
+    display: grid;
+    //Auto-fit will create aas many colums as fit within container
+    //minmax(300px, 1fr) the grid will become 1 column width in column becomes less then 300px
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: 1fr 1fr;
+
+    gap: 24px;
+
+    .cmm-step-content{
+        display: flex;
+        gap: 0px 16px;
+        color: rgb(255, 255, 255);
+        align-items: start;
+        justify-content: start;
+        padding: 24px 24px 24px 24px;
+        border-radius: 8px;
+        outline: #ffffff8d solid 0.5px;
+        //border: 0.5px solid  #ffffffc2;
+        //background-color: #dae6f8c2;
+        //box-shadow: 0px 18px 36px -18px rgba(0,0,0,0.1),0px 30px 45px -30px rgba(50,50,93,0.25);;
+
+        &:hover{
+            box-shadow: rgba(114, 205, 235, 0.528) 0px 4px 12px;
+        }
+
+
+        .step-number{
+            font-size: 3.5rem;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+            color: #bcd2f789;
+        
+        }
+        .cmm-step-box{
+
+           h2{
+            color: rgb(255, 255, 255);
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 16px;
+           } 
+
+           p{
+            color: rgb(237, 237, 237);
+            line-height: 29px;
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: .3px;
+           }
+        }
+    }
+}
+
+
+//Colour matching how to -- END
+
+//FAQ section -- START
+.cmm-faq-section{
+    
+    .cmm-faq-text-box{
+        text-align: center;
+
+        h2{
+            font-size: 1rem;
+            color: #34558b;
+        }
+
+        h3{
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: 600;
+        }
+    }
+
+    .cmm-faq-box-wrap{
+        max-width: 900px;
+        margin: 0 auto;
+
+        .cmm-faq-flex-wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+    }
+
+}
+
+//FAQ section -- END 
 //Visit Banner -- START
 .cmm-visit-section{
     max-width: 1560px;
