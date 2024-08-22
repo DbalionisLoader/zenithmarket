@@ -90,7 +90,7 @@
 //Google widget style
 
 .grw-net-widget-one{
-    justify-content:start !important;
+    justify-content:flex-start !important;
 }
 
 //Get rid of widget branding link
@@ -259,7 +259,7 @@
         
 .cmm-title-container{
     color: white;
-
+    padding-right: 24px;
         h2{
             font-size: 44px;
             font-weight: 600;
@@ -292,8 +292,8 @@
         display: flex;
         gap: 0px 16px;
         color: rgb(255, 255, 255);
-        align-items: start;
-        justify-content: start;
+        align-items: flex-start;
+        justify-content: flex-start;
         padding: 24px 24px 24px 24px;
         border-radius: 8px;
         outline: #ffffff8d solid 0.5px;
@@ -345,7 +345,7 @@
     
     .cmm-faq-text-box{
         text-align: center;
-
+        margin-bottom: 48px;
         h2{
             font-size: 1rem;
             color: #34558b;
@@ -361,18 +361,70 @@
     .cmm-faq-box-wrap{
         max-width: 900px;
         margin: 0 auto;
+        user-select: none;
 
         .cmm-faq-flex-wrap{
             display: flex;
             flex-direction: column;
-            align-items: start;
+            align-items: flex-start;
             justify-content: center;
-        }
-    }
 
+            
+            details{
+                width: 100%;
+                padding: 1rem;
+                border: 1px solid rgb(211, 211, 211);
+                border-radius: 8px;
+                margin-bottom: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                p{  
+
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                
+                }
+
+                @media(max-width:665px){
+                    align-items: flex-start;
+                }
+            
+            }
+
+            summary {
+                cursor: pointer;
+                list-style: none; 
+            }
+
+            .cmm-summary-wrap{
+               font-weight: 500;
+               font-size: 1.15rem; 
+               display: flex;
+               gap: 8px;
+               align-items: center;
+               justify-content: space-between;
+              
+               //Adjust animation speed using trasform sec, adjust rotation using cubic-bezier timing
+               svg{
+                //Prevent svg icon shrinking due to flex responsive sizing
+                flex-shrink: 0; 
+                transition: transform 0.3s cubic-bezier(0.5, 0.8, 0.5, 1.5);
+               }
+
+               @media(max-width:665px){
+                align-items: flex-start;
+                 }
+            }
+
+            
+            details[open] .cmm-summary-wrap svg {
+                transform: rotate(45deg);
+              }
+        }
+    } 
 }
 
 //FAQ section -- END 
+
 //Visit Banner -- START
 .cmm-visit-section{
     max-width: 1560px;
