@@ -6,7 +6,7 @@
         </div>
         <div class="cmm-brand-logo-wrapper d-flex justify-content-center align-items-center">
             <div class="brand-logo-card">
-                 <img src="<?php echo get_template_directory_uri(); ?>/images/hbbody-logo-480x185.png" alt="">
+                 <img src="<?php echo get_template_directory_uri(); ?>/images/hbbody-logo-480x185.png"  alt="">
             </div>
             <div class="brand-logo-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/Kapci-Logo-Ai.png" alt="">

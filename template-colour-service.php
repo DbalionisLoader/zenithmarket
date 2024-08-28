@@ -39,6 +39,7 @@ get_header();?>
         </section>
         <section class="cmm-paintbrands-section">
         </section>
+        <?php get_template_part('template-parts/sections/product', 'grid'); ?>
         <?php get_template_part('template-parts/sections/brand', 'list'); ?>
         <?php get_template_part('template-parts/sections/matching', 'steps'); ?>
         <?php get_template_part('template-parts/sections/question', 'accord'); ?>

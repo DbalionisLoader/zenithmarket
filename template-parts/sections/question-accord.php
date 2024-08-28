@@ -1,9 +1,9 @@
 <section class="cmm-faq-section ">
-    <div class="cmm-faq-container cmm-container"s>
+    <div class="cmm-faq-container cmm-container">
         <div class="cmm-faq-text-box">
             <h2>FAQ</h2>
             <h3>Frequently asked questions</h3>
-            <p>We pride ourselves on using only the industry leading automotive paint brands for our paint matching and mixing services.</p>
+            
         </div>
         <div class="cmm-faq-box-wrap">
             <div class=cmm-faq-flex-wrap>
