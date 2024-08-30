@@ -1,9 +1,9 @@
-<section class="cmm-faq-section ">
-    <div class="cmm-faq-container cmm-container">
+<section class="cmm-faq-section">
+    <div class="cmm-faq-container cmm-container-sm">
         <div class="cmm-faq-text-box">
             <h2>FAQ</h2>
             <h3>Frequently asked questions</h3>
-            
+  
         </div>
         <div class="cmm-faq-box-wrap">
             <div class=cmm-faq-flex-wrap>

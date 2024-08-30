@@ -18,7 +18,10 @@ get_header();?>
                 <span class="cmm-preheading">Soll Automotive Paints</span> <br>
                 <h1>Car Paint Matching</h1>
                 <p class="mb-2">Get the most accurate paint colour match and specialty car paint mixed at Soll Leeds. </p>
-                <div class="review-widget_net" data-uuid="9c9224b8-6d56-4b67-95ff-603354ec5da3" data-template="2" data-lang="en" data-theme="dark"></div><script src="https://grwapi.net/widget.min.js"></script>
+               <!-- ========== Start Section ========== 
+               <div class="review-widget_net" data-uuid="9c9224b8-6d56-4b67-95ff-603354ec5da3" data-template="2" data-lang="en" data-theme="dark"></div><script src="https://grwapi.net/widget.min.js"></script>-->
+               <!-- ========== End Section ========== -->
+               <div class="review-widget_net" data-uuid="9c9224b8-6d56-4b67-95ff-603354ec5da3" data-template="10" data-lang="en" data-theme="dark"></div><script src="https://grwapi.net/widget.min.js"></script>
                 <div class="cmm-buttons-container">
                     <a href="#" class="cmm-button primary">Visit Our Store</a>
                 </div>
@@ -43,6 +46,7 @@ get_header();?>
         <?php get_template_part('template-parts/sections/brand', 'list'); ?>
         <?php get_template_part('template-parts/sections/matching', 'steps'); ?>
         <?php get_template_part('template-parts/sections/question', 'accord'); ?>
+        <?php get_template_part('template-parts/sections/testimonial', 'grid'); ?>
         <?php get_template_part('template-parts/sections/visit', 'banner'); ?>
     </main>
     <script src="https://grwapi.net/widget.min.js"></script>
